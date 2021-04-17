@@ -1,13 +1,14 @@
 # Mapa Litoestratigráfico Preditivo - Diamantina (MG)
+Trabalho de conclusão de curso (Geologia-IGC-UFMG)
 
 Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://www.linkedin.com/in/guilherme-silveira)
 
 Orientadores: [Pedro Casagrande](https://www.linkedin.com/in/pedro-casagrande) & [Iago Costa](https://github.com/iagoslc)
 
 ## Objetivo
-O trabalho tem como objetivo a produção de um **mapa litoestratigráfico preditivo**, a partir de dados de sensores remotos e dados do mapeamento geológico realizado pelos alunos da disciplina de Estágio Supervisionado do ano de 2018, na região de Diamantina. As predições das unidades litoestratigráficas serão realizadas, utilizando algoritmos de *Machine Learning*.
+O trabalho tem como objetivo a produção de um **mapa litoestratigráfico preditivo**, a partir de dados de sensores remotos e dados do mapeamento geológico realizado pelos alunos da disciplina de Estágio Supervisionado do ano de 2018, na região de Diamantina. As predições das unidades litoestratigráficas serão realizadas, utilizando algoritmos de *Machine Learning* (aprendizado supervisionado).
 
-O produto gráfico final poderá fornecer *insights* a respeito de regiões nas quais os dados de sensores remotos não apresentam boa compatibilidade com os litotipos interpretados. Além disso, as zonas de divergência entre o mapa preditivo e o mapa interpretado pelos estudantes da disciplina serão comparadas com o mapa de pontos levantados pelos alunos, a fim de se verificar uma possível correlação entre a densidade de distribuição da amostragem litológica e possíveis viéses interpretativos.
+O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser utilizado como um meio de reconciliação entre os dados de mapeamento de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa litoestratigráfico preditivo podem fornecer *insights* e orientar futuras campanhas de mapeamento na região de Diamantina (MG).
 
 ## Informações gerais
 
@@ -19,7 +20,7 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 - Unidade: m
 - Elipsoide: GRS 1980
 - Resolução: 62.5 m x 62.5 m
-- Extensão: (xmin = , ymin = , xmax = , ymax = )
+- Extensão: (xmin = 634163.67, ymin = 7969052.06, xmax = 640038.70, ymax = 7983240.00)
 
 ##### Unidades litoestratigráficas
 
@@ -41,7 +42,7 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 
 ##### Dicionário de features
 
-|    Feature    |  Unidade  |                         Raster / Grid                            |                    Descrição                                        |
+|    Feature    |  Unidade  |                         Raster / Grid                            |                             Descrição                               |
 |:-------------:|:---------:|:----------------------------------------------------------------:|:-------------------------------------------------------------------:|
 |    SIGNAL     |    nT/m   | [SIGNAL.grd]()                                                   |Sinal analítico do campo magnético total                             |
 |    K_PERC     |     %     | [K_PERC.grd]()                                                   |Potássio                                                             |
@@ -68,10 +69,16 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 
 ## Versões do software
 
-- [Python v3.6.10](https://docs.python.org/release/3.6.10/)
-- [Numpy v]()
-- [Pandas v]()
-- [Matplotlib v]()
-- [Seaborn v]()
-- [Scikit Learn v]()
-- [Imbalance Learn v]()
+- [python v3.6.10](https://docs.python.org/release/3.6.10/)
+- [conda v4.9.2](https://docs.conda.io/projects/conda/en/master/release-notes.html)
+- [jupyter v1.0.0](https://jupyter.org/documentation)
+- [ipython v7.16.1](https://ipython.org/documentation.html)
+- [numpy v1.17.0](https://numpy.org/doc/)
+- [pandas v1.0.5](https://pandas.pydata.org/docs/)
+- [matplotlib v3.2.2](https://matplotlib.org/stable/gallery/index.html)
+- [seaborn v0.10.1](https://seaborn.pydata.org/examples/index.html)
+- [statsmodels v0.11.1](https://www.statsmodels.org/stable/index.html)
+- [scipy v1.5.0](https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html)
+- [scikit-learn v0.24.1](https://scikit-learn.org/stable/auto_examples/index.html)
+- [imbalanced-learn v0.8.0](https://imbalanced-learn.org/stable/)
+
