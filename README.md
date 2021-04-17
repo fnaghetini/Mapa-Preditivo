@@ -1,6 +1,6 @@
 # Mapa Litoestratigráfico Preditivo - Diamantina (MG)
 
-##### Trabalho de conclusão de curso - Geologia / IGC / UFMG
+##### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
 
 Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://www.linkedin.com/in/guilherme-silveira)
 
