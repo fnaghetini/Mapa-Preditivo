@@ -44,30 +44,30 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 
 ##### Dicionário de features
 
-|    Feature    |  Unidade  |                         Raster / Grid                            |                             Descrição                               |
-|:-------------:|:---------:|:----------------------------------------------------------------:|:-------------------------------------------------------------------:|
-|    SIGNAL     |    nT/m   | [SIGNAL.grd]()                                                   |Sinal analítico do campo magnético total                             |
-|    K_PERC     |     %     | [K_PERC.grd]()                                                   |Potássio                                                             |
-|    TH_PPM     |    ppm    | [TH_PPM.grd]()                                                   |Tório                                                                |
-|     U_PPM     |    ppm    | [U_PPM.grd]()                                                    |Urânio                                                               |
-|    TC_EXP     |    μR/h   | [TC_EXP.grd]()                                                   |Contagem total                                                       |
-|     U_K       |     -     | [U_K.grd]()                                                      |Razão urânio / potássio                                              |
-|     TH_K      |     -     | [TH_K.grd]()                                                     |Razão tório / potássio                                               |
-|     U_TH      |     -     | [U_TH.grd]()                                                     |Razão urânio / tório                                                 |
-|      MDT      |     m     | [MDT.grd]()                                                      |Modelo digital de terreno                                            |
-|      MDE      |     m     | [MDE.tif]()                                                      |Modelo digital de elevação                                           |
-|      B01      |     -     | [B01.tif]()                                                      |Landsat 8 Sensor OLI - COSTAL (0.433 - 0.453 μm)                     |
-|      B02      |     -     | [B02.tif]()                                                      |Landsat 8 Sensor OLI - AZUL (0.450 - 0.515 μm)                       |
-|      B03      |     -     | [B03.tif]()                                                      |Landsat 8 Sensor OLI - VERDE (0.525 - 0.600 μm)                      |
-|      B04      |     -     | [B04.tif]()                                                      |Landsat 8 Sensor OLI - VERMELHO (0.630 - 0.680 μm)                   |
-|      B05      |     -     | [B05.tif]()                                                      |Landsat 8 Sensor OLI - INFRAVERMELHO PRÓXIMO (0.845 - 0.885 μm)      |
-|      B06      |     -     | [B06.tif]()                                                      |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (1.560 - 1.660 μm)        |
-|      B07      |     -     | [B07.tif]()                                                      |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (2.100 - 2.300 μm)        |
-|      B08      |     -     | [B08.tif]()                                                      |Landsat 8 Sensor OLI - PANCROMÁTICO (0.500 - 0.680 μm)               |
-|      B09      |     -     | [B09.tif]()                                                      |Landsat 8 Sensor OLI - CIRRUS (1.360 - 1.390 μm)                     |
-|    LAND7_R    |     -     | [LAND7.tif]()                                                    |Landsat 7 Sensor EMT+ - VERMELHO                                     |
-|    LAND7_G    |     -     | [LAND7.tif]()                                                    |Landsat 7 Sensor EMT+ - VERDE                                        |
-|    LAND7_B    |     -     | [LAND7.tif]()                                                    |Landsat 7 Sensor EMT+ - AZUL                                         |
+|    Feature    |  Unidade  |                         Fonte                         |                           Descrição                           |
+|:-------------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
+| SIGNAL  | nT/m | Biblioteca Virtual UFMG                                          |Sinal analítico do campo magnético total                       |
+| K_PERC  |   %  | Biblioteca Virtual UFMG                                          |Potássio                                                       |
+| TH_PPM  |  ppm | Biblioteca Virtual UFMG                                          |Tório                                                          |
+|  U_PPM  |  ppm | Biblioteca Virtual UFMG                                          |Urânio                                                         |
+|  TC_EXP | μR/h | Biblioteca Virtual UFMG                                          |Contagem total                                                 |
+|   U_K   |   -  | Biblioteca Virtual UFMG                                          |Razão urânio / potássio                                        |
+|  TH_K   |   -  | Biblioteca Virtual UFMG                                          |Razão tório / potássio                                         |
+|  U_TH   |   -  | Biblioteca Virtual UFMG                                          |Razão urânio / tório                                           |
+|   MDT   |   m  | Biblioteca Virtual UFMG                                          |Modelo digital de terreno                                      |
+|   MDE   |   m  | [INPE](http://www.dsr.inpe.br/topodata/dados.php)                |Modelo digital de elevação                                     |
+|   B01   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - COSTAL (0.433 - 0.453 μm)               |
+|   B02   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - AZUL (0.450 - 0.515 μm)                 |
+|   B03   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - VERDE (0.525 - 0.600 μm)                |
+|   B04   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - VERMELHO (0.630 - 0.680 μm)             |
+|   B05   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - INFRAVERMELHO PRÓXIMO (0.845 - 0.885 μm)|
+|   B06   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (1.560 - 1.660 μm)  |
+|   B07   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (2.100 - 2.300 μm)  |
+|   B08   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - PANCROMÁTICO (0.500 - 0.680 μm)         |
+|   B09   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - CIRRUS (1.360 - 1.390 μm)               |
+| LAND7_R |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERMELHO                               |
+| LAND7_G |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERDE                                  |
+| LAND7_B |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - AZUL                                   |
 
 ## Versões do software
 
