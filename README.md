@@ -11,6 +11,12 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 
 ## Informações gerais
 
+##### Sistema de referência
+
+- Sistema de referência: SIRGAS2000
+- Resolução: 62.5 m x 62.5 m
+- Extensão: (xmin = , ymin = , xmax = , ymax = )
+
 ##### Unidades litoestratigráficas
 
 |  ID  |  Sigla   |  Código  |              Unidade               |
@@ -58,9 +64,3 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 |               |           |          |             |                                                 |
 |               |           |          |             |                                                 |
 |               |           |          |             |                                                 |
-
-##### Sistema de referência
-
-- Sistema de referência: SIRGAS2000
-- Resolução: 62.5 m x 62.5 m
-- Extensão: (xmin = , ymin = , xmax = , ymax = )
