@@ -1,12 +1,13 @@
 # Mapa Litoestratigráfico Preditivo - Diamantina (MG)
-Trabalho de conclusão de curso (Geologia-IGC-UFMG)
+
+##### Trabalho de conclusão de curso - Geologia / IGC / UFMG
 
 Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://www.linkedin.com/in/guilherme-silveira)
 
 Orientadores: [Pedro Casagrande](https://www.linkedin.com/in/pedro-casagrande) & [Iago Costa](https://github.com/iagoslc)
 
 ## Objetivo
-O trabalho tem como objetivo a produção de um **mapa litoestratigráfico preditivo**, a partir de dados de sensores remotos e dados do mapeamento geológico realizado pelos alunos da disciplina de Estágio Supervisionado do ano de 2018, na região de Diamantina. As predições das unidades litoestratigráficas serão realizadas, utilizando algoritmos de *Machine Learning* (aprendizado supervisionado).
+O trabalho tem como objetivo a produção de um **mapa litoestratigráfico preditivo 1:25.000**, a partir de dados de sensores remotos e dados do mapeamento geológico realizado pelos alunos da disciplina de Estágio Supervisionado do ano de 2018, na região de Diamantina. As predições das unidades litoestratigráficas serão realizadas, utilizando algoritmos de *Machine Learning* (aprendizado supervisionado).
 
 O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser utilizado como um meio de reconciliação entre os dados de mapeamento de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa litoestratigráfico preditivo podem fornecer *insights* e orientar futuras campanhas de mapeamento na região de Diamantina (MG).
 
@@ -14,6 +15,7 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 
 ##### Sistema de referência
 
+- EPSG: 31983
 - Projeção: UTM
 - Zona: 23S
 - Datum: SIRGAS2000
