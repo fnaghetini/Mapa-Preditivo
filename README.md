@@ -29,7 +29,8 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 |      |          |          |                                    |
 
 
-#### Dicionário de features
+##### Dicionário de features
+
 |    Feature    |  Unidade  |  Código  |    Raster   |                    Descrição                    |
 |:-------------:|:---------:|:--------:|:-----------:|:-----------------------------------------------:|
 |               |           |          |             |                                                 |
@@ -61,5 +62,5 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 ##### Sistema de referência
 
 - Sistema de referência: SIRGAS2000
-- Resolução:
-- Extensão:
+- Resolução: 62.5 m x 62.5 m
+- Extensão: (xmin = , ymin = , xmax = , ymax = )
