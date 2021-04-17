@@ -30,4 +30,36 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 
 
 #### Dicionário de features
+|    Feature    |  Unidade  |  Código  |    Raster   |                    Descrição                    |
+|:-------------:|:---------:|:--------:|:-----------:|:-----------------------------------------------:|
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
+|               |           |          |             |                                                 |
 
+##### Sistema de referência
+
+- Sistema de referência: SIRGAS2000
+- Resolução:
+- Extensão:
