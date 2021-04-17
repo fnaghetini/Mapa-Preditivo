@@ -64,3 +64,13 @@ O produto gráfico final poderá fornecer *insights* a respeito de regiões nas 
 |               |           |          |             |                                                 |
 |               |           |          |             |                                                 |
 |               |           |          |             |                                                 |
+
+## Versões do software
+
+- [Python v3.6.10](https://docs.python.org/release/3.6.10/)
+- [Numpy v]()
+- [Pandas v]()
+- [Matplotlib v]()
+- [Seaborn v]()
+- [Scikit Learn v]()
+- [Imbalance Learn v]()
