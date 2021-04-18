@@ -2,9 +2,9 @@
 
 ### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
 
-Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://www.linkedin.com/in/guilherme-silveira)
+Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://www.linkedin.com/in/guilherme-silveira-061806168/)
 
-Orientadores: [Pedro Casagrande](https://www.linkedin.com/in/pedro-casagrande) & [Iago Costa](https://github.com/iagoslc)
+Orientadores: [Pedro Casagrande](https://www.linkedin.com/in/pedro-casagrande-67411bba/) & [Iago Costa](https://github.com/iagoslc)
 
 ## Objetivo
 O trabalho tem como objetivo a produção de um **mapa litoestratigráfico preditivo 1:25.000**, a partir de dados de sensores remotos e dados do mapeamento geológico realizado pelos alunos da disciplina de Estágio Supervisionado do ano de 2018, na região de Diamantina. As predições das unidades litoestratigráficas serão realizadas, utilizando algoritmos de *Machine Learning* (aprendizado supervisionado).
@@ -15,14 +15,14 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 
 ### Sistema de referência
 
-- EPSG: 31983
-- Projeção: UTM
-- Zona: 23S
-- Datum: SIRGAS2000
-- Unidade: m
-- Elipsoide: GRS 1980
-- Resolução: 62.5 m x 62.5 m
-- Extensão: (xmin = 634163.67, ymin = 7969052.06, xmax = 640038.70, ymax = 7983240.00)
+- *EPSG: 31983*
+- *Projeção: UTM*
+- *Zona: 23S*
+- *Datum: SIRGAS2000*
+- *Unidade: m*
+- *Elipsoide: GRS 1980*
+- *Resolução: 62.5 m x 62.5 m*
+- *Extensão: (xmin = 634163.67, ymin = 7969052.06, xmax = 640038.70, ymax = 7983240.00)*
 
 ### Unidades litoestratigráficas
 
