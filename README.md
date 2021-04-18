@@ -1,6 +1,6 @@
 # Mapa Litoestratigráfico Preditivo - Diamantina (MG)
 
-##### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
+#### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
 
 Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://www.linkedin.com/in/guilherme-silveira)
 
@@ -13,7 +13,7 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 
 ## Informações gerais
 
-##### Sistema de referência
+#### Sistema de referência
 
 - EPSG: 31983
 - Projeção: UTM
@@ -24,7 +24,7 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 - Resolução: 62.5 m x 62.5 m
 - Extensão: (xmin = 634163.67, ymin = 7969052.06, xmax = 640038.70, ymax = 7983240.00)
 
-##### Unidades litoestratigráficas
+#### Unidades litoestratigráficas
 
 |  ID  |  Sigla   |  Código  |                 Unidade                  |      Hexadecimal      |      RGB      |
 |:----:|:--------:|:--------:|:----------------------------------------:|:---------------------:|:-------------:|
@@ -42,7 +42,7 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 |  12  |  Cx_GG   |  MAcgg   |        Complexo Granito-Gnáissico        |        #fabee8        | (255,190,232) |
 
 
-##### Dicionário de features
+#### Dicionário de features
 
 |    Feature    |  Unidade  |                         Fonte                         |                           Descrição                           |
 |:-------------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
