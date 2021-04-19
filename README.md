@@ -2,7 +2,7 @@
 
 ### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
 
-Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://www.linkedin.com/in/guilherme-silveira-061806168/)
+Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silveira](https://github.com/guiasilveira)
 
 Orientadores: [Pedro Casagrande](https://www.linkedin.com/in/pedro-casagrande-67411bba/) & [Iago Costa](https://github.com/iagoslc)
 
@@ -83,4 +83,6 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 - [scipy v1.5.0](https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html)
 - [scikit-learn v0.24.1](https://scikit-learn.org/stable/auto_examples/index.html)
 - [imbalanced-learn v0.8.0](https://imbalanced-learn.org/stable/)
-
+- [geopandas v0.6.1](https://geopandas.org/docs/user_guide.html)
+- [rasterio v1.0.21](https://rasterio.readthedocs.io/en/latest/api/index.html)
+- [folium v0.12.0](https://python-visualization.github.io/folium/)
