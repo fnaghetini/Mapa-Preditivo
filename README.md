@@ -46,15 +46,15 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 
 |    Feature    |  Unidade  |                         Fonte                         |                           Descrição                           |
 |:-------------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
-| SIGNAL  | nT/m | Biblioteca Virtual UFMG                                          |Sinal analítico do campo magnético total                       |
-| K_PERC  |   %  | Biblioteca Virtual UFMG                                          |Potássio                                                       |
-| TH_PPM  |  ppm | Biblioteca Virtual UFMG                                          |Tório                                                          |
-|  U_PPM  |  ppm | Biblioteca Virtual UFMG                                          |Urânio                                                         |
-|  TC_EXP | μR/h | Biblioteca Virtual UFMG                                          |Contagem total                                                 |
-|   U_K   |   -  | Biblioteca Virtual UFMG                                          |Razão urânio / potássio                                        |
-|  TH_K   |   -  | Biblioteca Virtual UFMG                                          |Razão tório / potássio                                         |
-|  U_TH   |   -  | Biblioteca Virtual UFMG                                          |Razão urânio / tório                                           |
-|   MDT   |   m  | Biblioteca Virtual UFMG                                          |Modelo digital de terreno                                      |
+| SIGNAL  | nT/m | Biblioteca UFMG                                                  |Sinal analítico do campo magnético total                       |
+| K_PERC  |   %  | Biblioteca UFMG                                                  |Potássio                                                       |
+| TH_PPM  |  ppm | Biblioteca UFMG                                                  |Tório                                                          |
+|  U_PPM  |  ppm | Biblioteca UFMG                                                  |Urânio                                                         |
+|  TC_EXP | μR/h | Biblioteca UFMG                                                  |Contagem total                                                 |
+|   U_K   |   -  | Biblioteca UFMG                                                  |Razão urânio / potássio                                        |
+|  TH_K   |   -  | Biblioteca UFMG                                                  |Razão tório / potássio                                         |
+|  U_TH   |   -  | Biblioteca UFMG                                                  |Razão urânio / tório                                           |
+|   MDT   |   m  | Biblioteca UFMG                                                  |Modelo digital de terreno                                      |
 |   MDE   |   m  | [INPE](http://www.dsr.inpe.br/topodata/dados.php)                |Modelo digital de elevação                                     |
 |   B01   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - COSTAL (0.433 - 0.453 μm)               |
 |   B02   |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - AZUL (0.450 - 0.515 μm)                 |
