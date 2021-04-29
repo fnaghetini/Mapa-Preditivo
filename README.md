@@ -28,18 +28,14 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 
 |  ID  |  Sigla   |  Código  |                 Unidade                  |      Hexadecimal      |      RGB      |
 |:----:|:--------:|:--------:|:----------------------------------------:|:---------------------:|:-------------:|
-|   1  |  Sm_PL   |  NP1βpl  |        Suíte Metaígnea Pedro Lessa       |        #ff0000        | (255,000,000) |
-|   2  |  Sm_CMD  |  PP4γcmd | Suíte Metaígnea Conceição do Mato Dentro |        #000000        | (000,000,000) |
-|   3  |  Fm_GM   |  PP4egm  |         Formação Galho do Miguel         |        #002673        | (000,038,115) |
-|   4  | Fm_SB_F  |  PP4esbf |   Formação Sopa Brumadinho - Nível F     |        #4ce600        | (076,230,000) |
-|   5  | Fm_SB_E  |  PP4esbe |   Formação Sopa Brumadinho - Nível E     |        #9b0000        | (155,000,000) |
-|   6  | Fm_SB_D  |  PP4esbd |   Formação Sopa Brumadinho - Nível D     |        #0000ff        | (000,000,255) |
-|   7  | Fm_SJC_C | PP4esjcc |  Formação São João da Chapada - Nível C  |        #ff8500        | (255,133,000) |
-|   8  | Fm_SJC_B | PP4esjcb |  Formação São João da Chapada - Nível B  |        #00e6a9        | (000,230,169) |
-|   9  | Fm_SJC_A | PP4esjca |  Formação São João da Chapada - Nível A  |        #ffff00        | (255,255,000) |
-|  10  |   Fm_B   |   PP34b  |          Formação Bandeirinha            |        #e600a9        | (230,000,169) |
-|  11  |  Fm_BG   | PP3csbg  |        Formação Barão de Guaicuí         |        #cccccc        | (204,204,204) |
-|  12  |  Cx_GG   |  MAcgg   |        Complexo Granito-Gnáissico        |        #fabee8        | (255,190,232) |
+|   1  |  Cx_GG   |  MAcgg   |        Complexo Granito-Gnáissico        |        #fabee8        | (255,190,232) |
+|   2  |  Fm_BG   | PP3csbg  |         Formação Barão de Guaicuí        |        #cccccc        | (204,204,204) |
+|   3  |  Fm_B    |  PP34b   |          Formação Bandeirinha            |        #e600a9        | (230,000,169) |
+|   4  |  Fm_SJC  | PP4esjc  |       Formação São João da Chapada       |        #ffff00        | (255,255,000) |
+|   5  | Fm_SB_D  |  PP4esbd |   Formação Sopa Brumadinho - Nível D     |        #0000ff        | (000,000,255) |
+|   6  | Fm_SB_E  |  PP4esbe |   Formação Sopa Brumadinho - Nível E     |        #9b0000        | (155,000,000) |
+|   7  | Fm_SB_F  |  PP4esbf |   Formação Sopa Brumadinho - Nível F     |        #4ce600        | (076,230,000) |
+|   8  |  Fm_GM   |  PP4egm  |        Formação Galho do Miguel          |        #73ffdf        | (115,255,223) |
 
 
 ### Dicionário de features
