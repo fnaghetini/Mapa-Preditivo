@@ -35,7 +35,7 @@ O produto gráfico final (i.e., mapa litoestratigráfico preditivo) pode ser uti
 |   5  | Fm_SB_D  |  PP4esbd |   Formação Sopa Brumadinho - Nível D     |        #0000ff        | (000,000,255) |
 |   6  | Fm_SB_E  |  PP4esbe |   Formação Sopa Brumadinho - Nível E     |        #9b0000        | (155,000,000) |
 |   7  | Fm_SB_F  |  PP4esbf |   Formação Sopa Brumadinho - Nível F     |        #4ce600        | (076,230,000) |
-|   8  |  Fm_GM   | PP4esjcc |        Formação Galho do Miguel          |        #73ffdf        | (115,255,223) |
+|   8  |  Fm_GM   |  PP4egm  |        Formação Galho do Miguel          |        #73ffdf        | (115,255,223) |
 
 ### Dicionário de features
 
