@@ -9,7 +9,7 @@ Orientadores: [Pedro Casagrande](https://github.com/casagrandepedro) & [Iago Cos
 ## Introdução
 De forma geral, a teoria do aprendizado estatístico supervisionado visa aprender uma função desconhecida  **𝑓:𝑥↦𝑦**  por meio do treinamento de um agente com exemplos  **{(𝑥(1),𝑦(1)),(𝑥(2),𝑦(2)),…,(𝑥(𝑛),𝑦(𝑛))}**  de entrada e saída da função.
 
-Nesse sentido, o objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer a unidade litoestratigráfica  **𝑦**  em um determinado domínio  **𝐷**  como função de sensores remotos  **𝑥𝑖**  e com base em anotações / interpretações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  feitas pelos geólogos que realizaram o mapeamento da área.
+Nesse sentido, o objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦𝑖**  em um determinado domínio  **𝐷**  como função de sensores remotos  **𝑥𝑖**  e com base em anotações / interpretações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  feitas pelos geólogos que realizaram o mapeamento da área.
 
 O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamantina (MG)** que pode ser utilizado como um meio de reconciliação entre os dados / interpretações de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa preditivo podem fornecer insights e orientar futuras campanhas de mapeamento na região.
 
