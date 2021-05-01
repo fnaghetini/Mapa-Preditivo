@@ -1,4 +1,4 @@
-# Mapa Litoestratigráfico Preditivo - Diamantina (MG)
+# Mapa  Geológico Preditivo
 
 ### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
 
