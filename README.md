@@ -43,7 +43,7 @@ O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamant
 
 |    Feature    |  Unidade  |                         Fonte                         |                           Descrição                           |
 |:-------------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
-|  GT  | nT/m | Biblioteca UFMG                                                  |Sinal analítico do campo magnético total                       |
+|  GT  | nT/m | Biblioteca UFMG                                                  |Gradiente total do campo magnético total                       |
 |   K  |   %  | Biblioteca UFMG                                                  |Potássio                                                       |
 |  TH  |  ppm | Biblioteca UFMG                                                  |Tório                                                          |
 |   U  |  ppm | Biblioteca UFMG                                                  |Urânio                                                         |
