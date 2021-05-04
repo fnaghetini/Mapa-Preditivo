@@ -31,13 +31,11 @@ O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamant
 |  ID  |  Sigla   |  Código  |                 Unidade                  |      Hexadecimal      |      RGB      |
 |:----:|:--------:|:--------:|:----------------------------------------:|:---------------------:|:-------------:|
 |   1  |  Cx_GG   |  MAcgg   |        Complexo Granito-Gnáissico        |        #fabee8        | (255,190,232) |
-|   2  |  Fm_BG   | PP3csbg  |         Formação Barão de Guaicuí        |        #cccccc        | (204,204,204) |
+|   2  |  Fm_BG   |  PP3csbg |         Formação Barão de Guaicuí        |        #cccccc        | (204,204,204) |
 |   3  |  Fm_B    |  PP34b   |          Formação Bandeirinha            |        #e600a9        | (230,000,169) |
-|   4  |  Fm_SJC  | PP4esjc  |       Formação São João da Chapada       |        #ffff00        | (255,255,000) |
-|   5  | Fm_SB_D  |  PP4esbd |   Formação Sopa Brumadinho - Nível D     |        #0000ff        | (000,000,255) |
-|   6  | Fm_SB_E  |  PP4esbe |   Formação Sopa Brumadinho - Nível E     |        #9b0000        | (155,000,000) |
-|   7  | Fm_SB_F  |  PP4esbf |   Formação Sopa Brumadinho - Nível F     |        #4ce600        | (076,230,000) |
-|   8  |  Fm_GM   |  PP4egm  |        Formação Galho do Miguel          |        #73ffdf        | (115,255,223) |
+|   4  |  Fm_SJC  |  PP4esjc |       Formação São João da Chapada       |        #ffff00        | (255,255,000) |
+|   5  |  Fm_SB   |  PP4esb  |   Formação Sopa Brumadinho - Nível D     |        #0000ff        | (000,000,255) |
+|   6  |  Fm_GM   |  PP4egm  |        Formação Galho do Miguel          |        #73ffdf        | (115,255,223) |
 
 ### Dicionário de features
 
