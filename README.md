@@ -81,3 +81,4 @@ O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamant
 - [geopandas v0.9.0](https://geopandas.org/docs/user_guide.html)
 - [rasterio v1.1.7](https://rasterio.readthedocs.io/en/latest/api/index.html)
 - [folium v0.12.0](https://python-visualization.github.io/folium/)
+- [xgboost v1.4.0](https://xgboost.readthedocs.io/en/latest/index.html#)
