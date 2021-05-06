@@ -41,25 +41,25 @@ O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamant
 
 |    Feature    |  Unidade  |                         Fonte                         |                           Descrição                           |
 |:-------------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
-|  GT  | nT/m | Biblioteca UFMG                                                  |Gradiente total do campo magnético total                       |
-|   K  |   %  | Biblioteca UFMG                                                  |Potássio                                                       |
-|  TH  |  ppm | Biblioteca UFMG                                                  |Tório                                                          |
-|   U  |  ppm | Biblioteca UFMG                                                  |Urânio                                                         |
-|  CT  | μR/h | Biblioteca UFMG                                                  |Contagem total                                                 |
-| U_K  |   -  | Biblioteca UFMG                                                  |Razão urânio / potássio                                        |
-| TH_K |   -  | Biblioteca UFMG                                                  |Razão tório / potássio                                         |
-| U_TH |   -  | Biblioteca UFMG                                                  |Razão urânio / tório                                           |
-|  MDT |   m  | Biblioteca UFMG                                                  |Modelo digital de terreno                                      |
-|  MDE |   m  | [INPE](http://www.dsr.inpe.br/topodata/dados.php)                |Modelo digital de elevação                                     |
-|  B01 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - COSTAL (0.433 - 0.453 μm)               |
-|  B02 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - AZUL (0.450 - 0.515 μm)                 |
-|  B03 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - VERDE (0.525 - 0.600 μm)                |
-|  B04 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - VERMELHO (0.630 - 0.680 μm)             |
-|  B05 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - INFRAVERMELHO PRÓXIMO (0.845 - 0.885 μm)|
-|  B06 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (1.560 - 1.660 μm)  |
-|  B07 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (2.100 - 2.300 μm)  |
-|  B08 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - PANCROMÁTICO (0.500 - 0.680 μm)         |
-|  B09 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                         |Landsat 8 Sensor OLI - CIRRUS (1.360 - 1.390 μm)               |
+|  GT  | nT/m | Biblioteca UFMG                                                     |Gradiente total                                                |
+|   K  |   %  | Biblioteca UFMG                                                     |Potássio                                                       |
+|  TH  |  ppm | Biblioteca UFMG                                                     |Tório                                                          |
+|   U  |  ppm | Biblioteca UFMG                                                     |Urânio                                                         |
+|  CT  | μR/h | Biblioteca UFMG                                                     |Contagem total                                                 |
+| U_K  |   -  | Biblioteca UFMG                                                     |Razão urânio / potássio                                        |
+| TH_K |   -  | Biblioteca UFMG                                                     |Razão tório / potássio                                         |
+| U_TH |   -  | Biblioteca UFMG                                                     |Razão urânio / tório                                           |
+|  MDT |   m  | Biblioteca UFMG                                                     |Modelo digital de terreno                                      |
+|  MDE |   m  | [INPE](http://www.dsr.inpe.br/topodata/dados.php)                   |Modelo digital de elevação                                     |
+|  B01 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - COSTAL (0.433 - 0.453 μm)               |
+|  B02 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - AZUL (0.450 - 0.515 μm)                 |
+|  B03 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - VERDE (0.525 - 0.600 μm)                |
+|  B04 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - VERMELHO (0.630 - 0.680 μm)             |
+|  B05 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - INFRAVERMELHO PRÓXIMO (0.845 - 0.885 μm)|
+|  B06 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (1.560 - 1.660 μm)  |
+|  B07 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (2.100 - 2.300 μm)  |
+|  B08 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - PANCROMÁTICO (0.500 - 0.680 μm)         |
+|  B09 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - CIRRUS (1.360 - 1.390 μm)               |
 |   R  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERMELHO                               |
 |   G  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERDE                                  |
 |   B  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - AZUL                                   |
