@@ -13,6 +13,14 @@ Nesse sentido, o objetivo deste trabalho é solucionar uma tarefa supervisionada
 
 O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamantina (MG)** que pode ser utilizado como um meio de reconciliação entre os dados/interpretações de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa preditivo podem fornecer insights e orientar futuras campanhas de mapeamento na região.
 
+## Fluxo de trabalho
+
+O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) deste projeto é dividido em três partes principais:
+
+1. Coleta e manipulação dos rasters
+2. [Limpeza e análise exploratória dos dados](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb)
+3. [Pré-processamento, modelagem dos dados e validação dos modelos](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb)
+
 ## Informações gerais
 
 ### Sistema de referência
