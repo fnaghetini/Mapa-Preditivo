@@ -15,7 +15,7 @@ O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamant
 
 ## Fluxo de trabalho
 
-O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) deste projeto é dividido em três partes principais:
+O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) deste projeto é dividido em quatro etapas principais:
 
 1. Aquisição e preparação dos sensores remotos
 2. [Limpeza e análise exploratória dos dados](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb)
