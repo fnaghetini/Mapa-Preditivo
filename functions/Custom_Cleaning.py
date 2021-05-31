@@ -2,6 +2,9 @@
 # Função auxiliar para a etapa de limpeza dos dados
 # ----------------------------------------------------
 
+# bibliotecas necessárias
+import pandas as pd
+
 """
     truncateVar(data :: dataframe, col :: string)
 
@@ -18,8 +21,6 @@ Retorna:
 - serie : variável (serie) truncada
 
 """
-
-import pandas as pd
 
 def truncateVar(data = None, col = None):
 
