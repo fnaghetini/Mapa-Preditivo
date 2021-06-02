@@ -2,7 +2,6 @@
 # Função auxiliar para a etapa de limpeza dos dados
 # ----------------------------------------------------
 
-# bibliotecas necessárias
 import pandas as pd
 
 """

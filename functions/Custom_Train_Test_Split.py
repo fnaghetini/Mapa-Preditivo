@@ -2,7 +2,6 @@
 # Função auxiliar para divisão entre dados de treino e teste
 # --------------------------------------------------------------------------------
 
-# bibliotecas necessárias
 from math import ceil
 import numpy as np
 import pandas as pd
