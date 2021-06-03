@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------------------------------
-# Função auxiliar para a etapa de limpeza dos dados
+# Funções auxiliares para geração de reports de validação
 # ---------------------------------------------------------------------------------------------------
 
 import pandas as pd
