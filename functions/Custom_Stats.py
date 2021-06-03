@@ -1,5 +1,5 @@
 # ----------------------------------------------------
-# Funções auxiliares de estatística
+# Funções auxiliares estatísticas
 # ----------------------------------------------------
 
 import pandas as pd

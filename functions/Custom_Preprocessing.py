@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------------------------------
-# Função auxiliar para a etapa de limpeza dos dados
+# Funções auxiliares para pré-processamento dos dados
 # ---------------------------------------------------------------------------------------------------
 
 import numpy as np
