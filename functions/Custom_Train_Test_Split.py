@@ -1,6 +1,6 @@
-# --------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------
 # Função auxiliar para divisão entre dados de treino e teste
-# --------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------
 
 from math import ceil
 import numpy as np
@@ -10,11 +10,10 @@ import pandas as pd
     customTrainTestSplit(df :: dataframe, feat_list :: list, coords_list :: list,
                          samp_per_class :: int, threshold = float, coords :: bool)
 
-Realiza a divisão dos dados entre treino e teste. O conjunto de treino é obtido a
-partir de uma amostragem aleatória de samp_per_class exemplos por unidade
-litoestratigráfica. Caso uma unidade apresente um número de exemplos menor que
-samp_per_class, uma porcentagem de suas instâncias são aleatoriamente amostradas,
-sendo essa porcentagem definida pelo parâmetro threshold.
+Realiza a divisão dos dados entre treino e teste. O conjunto de treino é obtido a partir de uma amostragem
+aleatória de samp_per_class exemplos por unidade litoestratigráfica. Caso uma unidade apresente um número
+de exemplos menor que samp_per_class, uma porcentagem de suas instâncias são aleatoriamente amostradas, sendo
+essa porcentagem definida pelo parâmetro threshold.
 
 Parâmetros:
 - df : dataframe (n, m) com os dados brutos

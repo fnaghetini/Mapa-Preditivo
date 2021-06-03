@@ -1,19 +1,17 @@
-# ----------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------
 # Função auxiliar para a etapa de limpeza dos dados
-# ----------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------
 
 import pandas as pd
 
 """
     truncateVar(data :: dataframe, col :: string)
 
-Realiza o truncamento de uma variável radiométrica col,
-tendo como referência os limiares inferior (lower) e
+Realiza o truncamento de uma variável radiométrica col, tendo como referência os limiares inferior (lower) e
 superior (upper).
 
 Parâmetros:
-- data : dataframe que contém a variável radiométrica de
-interesse
+- data : dataframe que contém a variável radiométrica de interesse
 - col : variável a ser truncada
 
 Retorna:

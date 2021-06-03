@@ -1,6 +1,6 @@
-# ----------------------------------------------------
+# -----------------------------------------------------------------------------------
 # Funções auxiliares estatísticas
-# ----------------------------------------------------
+# -----------------------------------------------------------------------------------
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,15 +9,12 @@ import seaborn as sns
 """
     sumStats(df :: dataframe)
 
-Gera um sumário estatístico completo de um dataframe df.
-As estatísticas incluem medidas de tendência central
-(X̅ e P50%), medidas de posição (Min, P10%, P99.5% e Max),
-medidas de dispersão (Amp, S², S e Cᵥ) e medida de forma
-(Skew).
+Gera um sumário estatístico completo de um dataframe df. As estatísticas incluem
+medidas de tendência central (X̅ e P50%), medidas de posição (Min, P10%, P99.5% e Max),
+medidas de dispersão (Amp, S², S e Cᵥ) e medida de forma (Skew).
 
 Parâmetro:
-- df : dataframe com as features utilizadas para o cálculo
-do sumário estatístico
+- df : dataframe com as features utilizadas para o cálculo do sumário estatístico
 
 Retorna:
 - stats : dataframe com o sumário estatístico
@@ -41,8 +38,7 @@ def sumStats(df = None):
 """
     plotBoxplots(df :: dataframe, cols :: list)
 
-Plota n boxplots, sendo n o número de features presentes
-na lista cols.
+Plota n boxplots, sendo n o número de features presentes na lista cols.
 
 Parâmetros:
 - df : dataframe com os dados
@@ -67,8 +63,8 @@ def plotBoxplots(df, cols = None):
 """
     sumByLito(df :: dataframe, f :: string)
 
-Cria um sumário estatístico completo de uma feature f
-agrupado pelas unidades litoestratigráficas.
+Cria um sumário estatístico completo de uma feature f agrupado pelas unidades
+litoestratigráficas.
 
 Parâmetro:
 - df : dataframe com os dados
@@ -92,8 +88,7 @@ def sumByLito(df, f = None):
 """
     histByLito(df :: dataframe, f :: string, col :: string, ec :: string)
 
-Plota histogramas de uma feature f agrupados pelas
-unidades litoestratigráficas.
+Plota histogramas de uma feature f agrupados pelas unidades litoestratigráficas.
 
 Parâmetros:
 - df : dataframe com os dados

@@ -21,10 +21,10 @@ n_components.
 Parâmetros:
 - n_components : número (int) de componentes principais
 - mask : narray (n, ), sendo n o número de features utilizadas na PCA. Este parâmetro indica os
-índices das colunas das features.
+índices das colunas das features
 
 Retorna:
-- instância da classe MaskedPCA.
+- instância da classe MaskedPCA
 
 """
 
