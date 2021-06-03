@@ -37,7 +37,7 @@ Este repositório é estruturado da seguinte maneira:
 
 - O [notebook1](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
 
-- O [notebook2](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb) abrange desde a etapa de pré-processamento dos dados até a escolha do modelo de melhor performance.
+- O [notebook2](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
 
 - A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados de saída da etapa de preparação dos sensores. O arquivo `data_nb1.csv` consiste nos dados utilizados no `notebook1.ipynb`, ao passo que `data_nb2.csv` representa os dados modelados no `notebook2.ipynb`.
 
