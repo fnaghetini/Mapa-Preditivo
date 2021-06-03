@@ -6,14 +6,12 @@ Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silv
 
 Orientadores: [Pedro Casagrande](https://github.com/casagrandepedro) & [Iago Costa](https://github.com/iagoslc)
 
-## Introdução
+## Resumo
 De forma geral, a teoria do aprendizado estatístico supervisionado visa aprender uma função desconhecida  **𝑓:𝑥↦𝑦**  por meio do treinamento de um agente com exemplos  **{(𝑥(1),𝑦(1)),(𝑥(2),𝑦(2)),…,(𝑥(𝑛),𝑦(𝑛))}**  de entrada e saída da função.
 
 Nesse sentido, o objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦𝑖**  em um determinado domínio  **𝐷**  como função de sensores remotos  **𝑥𝑖**  e com base em anotações/interpretações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  feitas pelos geólogos que realizaram o mapeamento da área.
 
 O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamantina (MG)** que pode ser utilizado como um meio de reconciliação entre os dados/interpretações de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa preditivo podem fornecer insights e orientar futuras campanhas de mapeamento na região.
-
-## Fluxo de trabalho
 
 O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) deste projeto é dividido em quatro etapas principais:
 
@@ -22,18 +20,43 @@ O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/wor
 3. [Pré-processamento, modelagem dos dados e validação dos modelos](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb)
 4. Pós-processamento
 
-## Informações gerais
+Os modelos que apresentaram melhor performance em relação às métricas avaliadas foram **XGBoost** e **Random Forest**, de acordo com o relatório abaixo:
+
+|        Métricas       | XGBoost | Random Forest |
+|:---------------------:|:-------:|:-------------:|
+|        Acurácia       |   0.64  |     0.64      |
+|  F1-Score (ponderado) |   0.66  |     0.65      |
+|  Precisão (ponderada) |   0.71  |     0.71      |
+|   Recall (ponderada)  |   0.64  |     0.64      |
+
+## Estrutura do repositório
+
+Este repositório é estruturado da seguinte maneira:
+
+- A pasta [workflow](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/workflow) contém o [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) adotado neste projeto.
+
+- O [notebook1](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
+
+- O [notebook2](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb) abrange desde a etapa de pré-processamento dos dados até a escolha do modelo de melhor performance.
+
+- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados de saída da etapa de preparação dos sensores. O arquivo `data_nb1.csv` consiste nos dados utilizados no `notebook1.ipynb`, ao passo que `data_nb2.csv` representa os dados modelados no `notebook2.ipynb`.
+
+- A pasta [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão **lowerCamelCase** para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão **UpperCamelCase**. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função.
+
+- A pasta [shp](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/shp) contém o mapa geológico de campo e o polígono da área deste projeto, ambos em formato shape file.
+
+## Informações complementares
 
 ### Sistema de referência
 
-- *EPSG: 31983*
-- *Projeção: UTM*
-- *Zona: 23S*
-- *Datum: SIRGAS2000*
-- *Unidade: m*
-- *Elipsoide: GRS 1980*
-- *Resolução: 62.5 m x 62.5 m*
-- *Extensão: (xmin = 634163.67, ymin = 7969052.06, xmax = 640038.70, ymax = 7983240.00)*
+- EPSG: 31983
+- Projeção: UTM
+- Zona: 23S
+- Datum: SIRGAS2000
+- Unidade: m
+- Elipsoide: GRS 1980
+- Resolução: 62.5 m x 62.5 m
+- Extensão: (xmin = 634163.67, ymin = 7969052.06, xmax = 640038.70, ymax = 7983240.00)
 
 ### Unidades litoestratigráficas
 
