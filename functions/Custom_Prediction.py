@@ -96,3 +96,36 @@ def plotPredictionProba(pr_ŷ, test, lith_list, cm = None):
         ax.set_title(str(lith_list[i]), size = 16)
         
     plt.tight_layout();
+
+# -----------------------------------------------------------------------------------------------------------
+
+"""
+    categoricalCrossEntropy(pr_ŷ :: narray, ŷ :: narray, test :: dataframe)
+
+Retorna um dataframe com as coordenadas e entropia cruzada.
+
+Parâmetros:
+- pr_ŷ : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
+- ŷ : narray(n-t, ) representando as predições do conjunto de teste
+- test : dataframe (n-t, m) representativo dos dados de treino
+
+Retorna:
+- df_entropy : dataframe(n-t, 3) com as coordenadas e entropia cruzada.
+
+"""
+
+def categoricalCrossEntropy(pr_ŷ, ŷ, test):
+    test_size = len(test)
+    df_entropy = test[['X','Y']]
+    entropy_list = []
+    
+    for i in range(test_size):
+        target = ŷ[i]
+        pred_prob = pr_ŷ[i,:]
+        x = pred_prob[target - 1]
+        entropy = - np.log2(x)
+        entropy_list.append(entropy)
+        
+    df_entropy['ENTROPY'] = entropy_list
+    
+    return df_entropy
