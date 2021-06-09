@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------------------------------------
-# Funções auxiliares para visualização das predições
+# Funções auxiliares para predições
 # -----------------------------------------------------------------------------------------------------------
 
 import numpy as np
@@ -7,95 +7,96 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 """
-    plotPrediction(train :: dataframe, test :: dataframe, ŷ :: narray, model :: string, cm :: colormap)
+    createPredTable(dic_ŷ :: dict, train :: dataframe, test :: dataframe)
 
-Plota o mapa geológico preditivo, o mapa geológico e o mapa com as inconsistências entre o mapa
-preditivo e o mapa geológico.
+Retorna um dataframe com as coordenadas e as predições de cada modelo treinado.
 
 Parâmetros:
+- dic_ŷ : dicionário com as predições de cada modelo
 - train : dataframe (t, m) representativo dos dados de treino
-- test : dataframe (n-t, m) representativo dos dados de treino
-- ŷ : narray (n-t, ) com as predições do target de um determinado modelo
-- model : string com o nome do modelo utilizado. Corresponde ao título do mapa geológico preditivo
-- cm : mapa de cores utilzado
+- test : dataframe (n-t, m) representativo dos dados de teste
 
 Retorna:
-- Mapa geológico preditivo do modelo, mapa geológico de campo e o mapa de inconsistências
+- df_pred : dataframe(n, 9) com as coordenadas e as predições de cada modelo
 
 """
 
-def plotPrediction(train, test, ŷ, model = None, cm = None):
-    # criação do dataframe mapa preditivo (df_pred + df_train)
-    pred = pd.DataFrame(ŷ, columns = ['TARGET'])
-    coords = test[['X','Y']]
-    df_pred = pd.concat([pred, coords], axis = 1)
-    df_train = train[['X', 'Y', 'TARGET']]
-    df_pred_map = pd.concat([df_pred, df_train]).sort_values(by = ['X','Y'])
-    df_pred_map.rename(columns = {'TARGET' : 'PRED'}, inplace = True)
-
-    # criação do dataframe mapa geológico (train + test)
-    df_geo_map = pd.concat([train, test])[['X','Y','TARGET']]
-    df_geo_map.sort_values(by = ['X','Y'], inplace = True)
-
-    # criação do dataframe inconsistências
-    df_miss = pd.merge(df_pred_map, df_geo_map, how = 'left')
-    df_miss['MISS'] = df_miss['TARGET'] - df_miss['PRED']
-    df_miss.query('MISS != 0', inplace = True)
+def createPredTable(dic_ŷ, train, test):
+    train_labels = list(train['TARGET'])
+    train_coords = train[['X','Y']]
+    test_coords = test[['X','Y']]
+    df_pred = pd.concat([train_coords,test_coords])
     
-    fig, (ax1, ax2, ax3) = plt.subplots(nrows = 1, ncols = 3, figsize = (10, 5))
-
-    # plot do mapa preditivo
-    pred_map = ax1.scatter(data = df_pred_map, x = 'X', y = 'Y', c = 'PRED', cmap = cm, s = 1.5, marker = 's')
-    ax1.set_title(model, size = 16)
-    ax1.set_xlabel('X (m)', size = 14)
-    ax1.set_ylabel('Y (m)', size = 14)
-    
-    # plot do mapa geológico
-    ax2.scatter(data = df_geo_map, x = 'X', y = 'Y', c = 'TARGET', cmap = cm, s = 1.5, marker = 's')
-    ax2.set_title("Mapa geológico", size = 16)
-    ax2.set_xlabel('X (m)', size = 14)
-    
-    # plot do mapa de inconsistências
-    ax3.scatter(data = df_miss, x = 'X', y = 'Y', c = 'red', s = 0.1, marker = 'o')
-    ax3.set_title("Inconsistências", size = 16)
-    ax3.set_xlabel('X (m)', size = 14)
-
-    # legenda de unidades
-    cbar = fig.colorbar(pred_map, ax = ax1, use_gridspec = False, anchor = (-27, 0))
-    cbar.ax.set_yticklabels(['MAcgg','PP3csbg','PP34b','PP4esjc','PP4esb','PP4egm'])
-    
-    plt.tight_layout();
+    for model in dic_ŷ.keys():
+        ŷ = list(dic_ŷ[model])
+        map_labels = train_labels + ŷ
+        df_pred[model] = map_labels
+        
+    return df_pred
 
 # -----------------------------------------------------------------------------------------------------------
 
 """
-    plotPredictionProba(pr_ŷ :: narray, test :: dataframe, lith_list :: list, cm :: string)
+    createMissClassifTable(df_pred :: dataframe, y_train :: narray, y_test :: narray)
 
-Plota um mapa de probabilidades preditas para cada uma das 6 classes (unidades).
+Retorna um dataframe com as coordenadas e as inconsistências entre o mapa geológico e cada mapa preditivo.
+As colunas de inconsistências por modelo são binárias, de modo que 1 simboliza inconsistência entre os mapas.
+
+Parâmetros:
+- df_pred : dataframe (n, 9) representativo das predições de cada modelo
+- y_train : narray (t, ) representativo dos labels de treino
+- y_test : narray (n-t, ) representativo dos labels de teste
+
+Retorna:
+- df_miss : dataframe(n, 9) com as coordenadas e as inconsistências apresentadas por cada modelo
+
+"""
+
+def createMissClassifTable(df_pred, y_train, y_test):
+    model_list = df_pred.columns[2:]
+    true_labels = list(y_train) + list(y_test)
+    df_miss = df_pred[['X','Y']]
+    
+    for model in model_list:
+        diff_list = true_labels - df_pred[model]
+        miss_list = []
+        
+        for diff in diff_list:
+            if diff == 0:
+                miss_list.append(0)
+            else:
+                miss_list.append(1)
+        
+        df_miss['MISS_' + model] = miss_list
+    
+    return df_miss
+
+# -----------------------------------------------------------------------------------------------------------
+
+"""
+    createPredProbaTable(pr_ŷ :: narray, test :: dataframe)
+
+Retorna um dataframe com as probabilidades preditas para cada uma das 6 classes (unidades).
 
 Parâmetros:
 - pr_ŷ : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
 - test : dataframe (n-t, m) representativo dos dados de treino
-- lith_list : lista com as unidades ordenadas pelos seus códigos
-- cm : mapa de cores utilzado
 
 Retorna:
-- Um mapa de probabilidades para cada uma das 6 unidades
+- df_proba_pred : dataframe (n-t, 8) com as coordenadas e probabilidades para cada uma das classes
 
 """
 
-def plotPredictionProba(pr_ŷ, test, lith_list, cm = None):
-    x = test['X']
-    y = test['Y']
+def createPredProbaTable(pr_ŷ, test):
+    litho_list = ['MAcgg','PP3csbg','PP34b','PP4esjc','PP4esb','PP4egm']
+    df_proba_pred = test[['X','Y']]
+    i = 0
 
-    fig, axs = plt.subplots(nrows = 2, ncols = 3, figsize = (12, 10))
+    for litho in litho_list:
+        df_proba_pred[litho] = pr_ŷ[:,i]
+        i += 1
 
-    for ax, i in zip(axs.flat, range(6)):
-        _map = ax.scatter(x, y, c = pr_ŷ[:,i], cmap = cm, s = 1.5, marker = 's')
-        fig.colorbar(_map, ax = ax, boundaries = np.linspace(0.0,1.0,6))
-        ax.set_title(str(lith_list[i]), size = 16)
-        
-    plt.tight_layout();
+    return df_proba_pred
 
 # -----------------------------------------------------------------------------------------------------------
 
@@ -107,7 +108,7 @@ Retorna um dataframe com as coordenadas e entropia cruzada.
 Parâmetros:
 - pr_ŷ : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
 - ŷ : narray(n-t, ) representando as predições do conjunto de teste
-- test : dataframe (n-t, m) representativo dos dados de treino
+- test : dataframe (n-t, m) representativo dos dados de teste
 
 Retorna:
 - df_entropy : dataframe(n-t, 3) com as coordenadas e entropia cruzada.
