@@ -8,6 +8,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
+import matplotlib.pyplot as plt
+import numpy as np
 
 """
     validationReport(pipeline :: pipeline, X_train :: narray, y_train :: narray, cv :: object)
@@ -83,3 +85,35 @@ def testReport(dic_ŷ, y_test):
         df_metrics[ŷ] = metrics
 
     return df_metrics
+
+# ----------------------------------------------------------------------------------------------------
+
+"""
+    plotModelScores(report :: dataframe, models :: list, col :: string, ec :: string)
+
+Plota um gráfico de barras dos modelos organizados em ordem descrescente com relação os seus
+respectivos scores médios de performance.
+
+Parâmetros:
+- report : dataframe de report das performances
+- models : lista com os nomes de cada um dos modelos
+- col : cor do gráfico de barras
+- ec : cor da borda do gráfico de barras
+
+Retorna:
+- Gráfico de barras com os scores médios de de performance para cada um dos modelos
+
+"""
+
+def plotModelScores(report, models, col, ec):
+
+    mean_scores = [report[m].mean() for m in models]
+    dic_mean_scores = {'MODEL' : models, 'MEAN' : mean_scores}
+    df_mean_scores = pd.DataFrame(dic_mean_scores).sort_values('MEAN', ascending = False)
+
+    plt.figure(figsize = (9,4))
+    plt.bar('MODEL', 'MEAN', data = df_mean_scores, color = col, edgecolor = ec)
+    plt.ylabel('Score Médio', size = 14)
+    plt.yticks(np.arange(0.0,1.1,0.1))
+
+    plt.tight_layout();
