@@ -16,8 +16,8 @@ O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamant
 O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) deste projeto é dividido em quatro etapas principais:
 
 1. Aquisição e preparação dos sensores remotos
-2. [Limpeza e análise exploratória dos dados](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb)
-3. [Pré-processamento e modelagem dos dados](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb)
+2. Limpeza e análise exploratória dos dados
+3. Pré-processamento e modelagem dos dados
 4. Pós-processamento
 
 Os modelos que apresentaram melhor performance em relação às métricas avaliadas foram **XGBoost** e **Random Forest**, de acordo com o relatório abaixo:
