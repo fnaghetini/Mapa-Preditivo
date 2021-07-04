@@ -25,9 +25,9 @@ Os modelos que apresentaram melhor performance em relação às métricas avalia
 |        Métricas       | XGBoost | Random Forest |
 |:---------------------:|:-------:|:-------------:|
 |        Acurácia       |   0.66  |     0.66      |
-|  F1-Score (ponderado) |   0.67  |     0.67      |
-|  Precisão (ponderada) |   0.71  |     0.72      |
-|   Recall (ponderada)  |   0.66  |     0.66      |
+|        F1-Score       |   0.67  |     0.67      |
+|        Precisão       |   0.71  |     0.72      |
+|         Recall        |   0.66  |     0.66      |
 
 ## Estrutura do repositório
 
