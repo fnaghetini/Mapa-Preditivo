@@ -7,7 +7,7 @@ Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silv
 Orientadores: [Pedro Casagrande](https://github.com/casagrandepedro) & [Iago Costa](https://github.com/iagoslc)
 
 ## Resumo
-De forma geral, a teoria do aprendizado estatístico supervisionado visa aprender uma função desconhecida  **𝑓:𝑥↦𝑦**  por meio do treinamento de um agente com exemplos  **{(𝑥(1),𝑦(1)),(𝑥(2),𝑦(2)),…,(𝑥(𝑛),𝑦(𝑛))}**  de entrada e saída da função.
+De forma geral, a teoria do aprendizado estatístico supervisionado visa aprender uma função desconhecida  **𝑓:𝑥↦𝑦**  por meio do treinamento de um agente com exemplos  **{[𝑥(1),𝑦(1)),(𝑥(2),𝑦(2)),…,(𝑥(𝑛),𝑦(𝑛)]}**  de entrada e saída da função.
 
 Nesse sentido, o objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦𝑖**  em um determinado domínio  **𝐷**  como função de sensores remotos  **𝑥𝑖**  e com base em anotações/interpretações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  feitas pelos geólogos que realizaram o mapeamento da área.
 
@@ -17,7 +17,7 @@ O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/wor
 
 1. Aquisição e preparação dos sensores remotos
 2. [Limpeza e análise exploratória dos dados](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb)
-3. [Pré-processamento, modelagem dos dados e validação dos modelos](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb)
+3. [Pré-processamento e modelagem dos dados](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb)
 4. Pós-processamento
 
 Os modelos que apresentaram melhor performance em relação às métricas avaliadas foram **XGBoost** e **Random Forest**, de acordo com o relatório abaixo:
@@ -44,6 +44,10 @@ Este repositório é estruturado da seguinte maneira:
 - A pasta [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão **lowerCamelCase** para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão **UpperCamelCase**. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
 
 - A pasta [shp](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/shp) contém o mapa geológico de campo e o polígono da área deste projeto, ambos em formato shape file.
+
+- A pasta [output](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output) contém os resultados obtidos durante o projeto. Esses dados são utilizados para a confecção dos mapas finais do projeto.
+
+- A pasta [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos dois notebooks em formato .png.
 
 ## Informações complementares
 
