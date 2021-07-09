@@ -100,17 +100,15 @@ Este repositório é estruturado da seguinte maneira:
 |   G  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERDE                                  |
 |   B  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - AZUL                                   |
 
-## Versões do software
+## Versões utilizadas
 
 - [python v3.6.10](https://docs.python.org/release/3.6.10/)
 - [conda v4.9.2](https://docs.conda.io/projects/conda/en/master/release-notes.html)
 - [jupyter v1.0.0](https://jupyter.org/documentation)
-- [ipython v7.16.1](https://ipython.org/documentation.html)
 - [numpy v1.19.5](https://numpy.org/doc/)
 - [pandas v1.0.5](https://pandas.pydata.org/docs/)
 - [matplotlib v3.2.2](https://matplotlib.org/stable/gallery/index.html)
 - [seaborn v0.10.1](https://seaborn.pydata.org/examples/index.html)
-- [statsmodels v0.11.1](https://www.statsmodels.org/stable/index.html)
 - [scipy v1.5.0](https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html)
 - [scikit-learn v0.24.1](https://scikit-learn.org/stable/auto_examples/index.html)
 - [imbalanced-learn v0.8.0](https://imbalanced-learn.org/stable/)
@@ -118,3 +116,4 @@ Este repositório é estruturado da seguinte maneira:
 - [rasterio v1.1.7](https://rasterio.readthedocs.io/en/latest/api/index.html)
 - [folium v0.12.0](https://python-visualization.github.io/folium/)
 - [xgboost v1.4.0](https://xgboost.readthedocs.io/en/latest/index.html#)
+- [shap v0.39.0](https://shap.readthedocs.io/en/latest/index.html)
