@@ -7,12 +7,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 """
-    createPredTable(dic_ŷ :: dict, train :: dataframe, test :: dataframe)
+    createPredTable(dic_ŷ_train :: dict, dic_ŷ_test :: narray,
+                    train :: dataframe, test :: dataframe)
 
 Retorna um dataframe com as coordenadas e as predições de cada modelo treinado.
 
 Parâmetros:
-- dic_ŷ : dicionário com as predições de cada modelo
+- dic_ŷ_train : dicionário com as predições de cada modelo para o conjunto de treino
+- dic_ŷ_test : dicionário com as predições de cada modelo para o conjunto de teste
 - train : dataframe (t, m) representativo dos dados de treino
 - test : dataframe (n-t, m) representativo dos dados de teste
 
@@ -21,15 +23,15 @@ Retorna:
 
 """
 
-def createPredTable(dic_ŷ, train, test):
-    train_labels = list(train['TARGET'])
+def createPredTable(dic_ŷ_train, dic_ŷ_test, train, test):
     train_coords = train[['X','Y']]
-    test_coords = test[['X','Y']]
+    test_coords  = test[['X','Y']]
     df_pred = pd.concat([train_coords,test_coords])
     
-    for model in dic_ŷ.keys():
-        ŷ = list(dic_ŷ[model])
-        map_labels = train_labels + ŷ
+    for model in dic_ŷ_test.keys():
+        ŷ_train = list(dic_ŷ_train[model])
+        ŷ_test = list(dic_ŷ_test[model])
+        map_labels = ŷ_train + ŷ_test
         df_pred[model] = map_labels
         
     return df_pred
@@ -74,22 +76,30 @@ def createMissClassifTable(df_pred, y_train, y_test):
 # -----------------------------------------------------------------------------------------------------------
 
 """
-    createPredProbaTable(pr_ŷ :: narray, test :: dataframe)
+    createPredProbaTable(pr_ŷ_train :: narray, pr_ŷ_test :: narray,
+                         train :: dataframe, test :: dataframe)
 
 Retorna um dataframe com as probabilidades preditas para cada uma das 6 classes (unidades).
 
 Parâmetros:
-- pr_ŷ : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
-- test : dataframe (n-t, m) representativo dos dados de treino
+- pr_ŷ_train : narray (t, 6) representando as predições probabilísticas para cada uma das classes
+no conjunto de treino
+- pr_ŷ_test : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
+no conjunto de teste
+- train : dataframe (t, m) representativo dos dados de treino
+- test : dataframe (n-t, m) representativo dos dados de teste
 
 Retorna:
-- df_proba_pred : dataframe (n-t, 8) com as coordenadas e probabilidades para cada uma das classes
+- df_proba_pred : dataframe (n, 8) com as coordenadas e probabilidades para cada uma das classes
 
 """
 
-def createPredProbaTable(pr_ŷ, test):
+def createPredProbaTable(pr_ŷ_train, pr_ŷ_test, train, test):
     litho_list = ['MAcgg','PP3csbg','PP34b','PP4esjc','PP4esb','PP4egm']
-    df_proba_pred = test[['X','Y']]
+    train_coords = train[['X','Y']]
+    test_coords  = test[['X','Y']]
+    df_proba_pred = pd.concat([train_coords,test_coords])
+    pr_ŷ = np.concatenate([pr_ŷ_train,pr_ŷ_test])
     i = 0
 
     for litho in litho_list:
@@ -101,26 +111,39 @@ def createPredProbaTable(pr_ŷ, test):
 # -----------------------------------------------------------------------------------------------------------
 
 """
-    categoricalCrossEntropy(pr_ŷ :: narray, ŷ :: narray, test :: dataframe)
+    categoricalCrossEntropy(pr_ŷ_train :: narray, pr_ŷ_test :: narray,
+                            ŷ_train :: narray, ŷ_test :: narray,
+                            train :: dataframe, test :: dataframe)
 
 Retorna um dataframe com as coordenadas e entropia cruzada.
 
 Parâmetros:
-- pr_ŷ : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
-- ŷ : narray(n-t, ) representando as predições do conjunto de teste
+- pr_ŷ_train : narray (t, 6) representando as predições probabilísticas para cada uma das classes
+do conjunto de treino
+- pr_ŷ_test : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
+do conjunto de teste
+- ŷ_train : narray(t, ) representando as predições do conjunto de treino
+- ŷ_test : narray(n-t, ) representando as predições do conjunto de teste
+- train : dataframe (t, m) representativo dos dados de treino
 - test : dataframe (n-t, m) representativo dos dados de teste
 
 Retorna:
-- df_entropy : dataframe(n-t, 3) com as coordenadas e entropia cruzada.
+- df_entropy : dataframe(n, 3) com as coordenadas e entropia cruzada
 
 """
 
-def categoricalCrossEntropy(pr_ŷ, ŷ, test):
-    test_size = len(test)
-    df_entropy = test[['X','Y']]
+def categoricalCrossEntropy(pr_ŷ_train, pr_ŷ_test, ŷ_train, ŷ_test, train, test):
+    train_coords = train[['X','Y']]
+    test_coords  = test[['X','Y']]
+    df_entropy = pd.concat([train_coords,test_coords])
+
+    ŷ = np.concatenate([ŷ_train,ŷ_test])
+    pr_ŷ = np.concatenate([pr_ŷ_train,pr_ŷ_test])
+
+    size = len(df_entropy)
     entropy_list = []
     
-    for i in range(test_size):
+    for i in range(size):
         target = ŷ[i]
         pred_prob = pr_ŷ[i,:]
         x = pred_prob[target - 1]
