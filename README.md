@@ -18,28 +18,31 @@ O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/wor
 1. Aquisição e preparação dos sensores remotos
 2. Limpeza e análise exploratória dos dados
 3. Pré-processamento e modelagem dos dados
-4. Pós-processamento
+4. Explicação do modelo
+5. Pós-processamento
 
-Os modelos que apresentaram melhor performance em relação às métricas avaliadas foram **XGBoost** e **Random Forest**, de acordo com o relatório abaixo:
+O modelo **XGBoost** apresentou a melhor performance com relação às métricas avaliadas:
 
-|        Métricas       | XGBoost | Random Forest |
-|:---------------------:|:-------:|:-------------:|
-|        Acurácia       |   0.66  |     0.66      |
-|        F1-Score       |   0.68  |     0.68      |
-|        Precisão       |   0.72  |     0.73      |
-|         Recall        |   0.66  |     0.66      |
+|        Métricas       | XGBoost |
+|:---------------------:|:-------:|
+|        Acurácia       |   0.67  |
+|        F1-Score       |   0.68  |
+|        Precisão       |   0.72  |
+|         Recall        |   0.67  |
 
-## Estrutura do repositório
+## Estrutura do Repositório
 
 Este repositório é estruturado da seguinte maneira:
 
 - A pasta [workflow](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/workflow) contém o [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) adotado neste projeto.
 
-- O [notebook1](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
+- O [1º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
 
-- O [notebook2](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
+- O [2º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
 
-- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados de saída da etapa de preparação dos sensores. O arquivo `data_nb1.csv` consiste nos dados utilizados no `notebook1.ipynb`, ao passo que `data_nb2.csv` representa os dados modelados no `notebook2.ipynb`.
+- O [3º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook3.ipynb) apresenta as explicações do modelo selecionado.
+
+- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks.
 
 - A pasta [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
 
@@ -86,7 +89,6 @@ Este repositório é estruturado da seguinte maneira:
 | TH_K |   -  | Biblioteca UFMG                                                     |Razão tório / potássio                                         |
 | U_TH |   -  | Biblioteca UFMG                                                     |Razão urânio / tório                                           |
 |  MDT |   m  | Biblioteca UFMG                                                     |Modelo digital de terreno                                      |
-|  MDE |   m  | [INPE](http://www.dsr.inpe.br/topodata/dados.php)                   |Modelo digital de elevação                                     |
 |  B01 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - COSTAL (0.433 - 0.453 μm)               |
 |  B02 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - AZUL (0.450 - 0.515 μm)                 |
 |  B03 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - VERDE (0.525 - 0.600 μm)                |
@@ -94,8 +96,6 @@ Este repositório é estruturado da seguinte maneira:
 |  B05 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - INFRAVERMELHO PRÓXIMO (0.845 - 0.885 μm)|
 |  B06 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (1.560 - 1.660 μm)  |
 |  B07 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (2.100 - 2.300 μm)  |
-|  B08 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - PANCROMÁTICO (0.500 - 0.680 μm)         |
-|  B09 |   -  | [INPE](http://www.dgi.inpe.br/catalogo/)                            |Landsat 8 Sensor OLI - CIRRUS (1.360 - 1.390 μm)               |
 |   R  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERMELHO                               |
 |   G  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERDE                                  |
 |   B  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - AZUL                                   |
