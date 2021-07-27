@@ -36,11 +36,11 @@ Este repositório é estruturado da seguinte maneira:
 
 - A pasta [workflow](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/workflow) contém o [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) adotado neste projeto.
 
-- O [1º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook1.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
+- O [1º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/1-exploratory_data_analysis.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
 
-- O [2º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook2.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
+- O [2º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
 
-- O [3º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/notebook3.ipynb) apresenta as explicações do modelo selecionado.
+- O [3º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
 
 - A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks.
 
