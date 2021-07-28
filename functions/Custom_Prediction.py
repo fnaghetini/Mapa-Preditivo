@@ -69,7 +69,7 @@ def createMissClassifTable(df_pred, y_train, y_test):
             else:
                 miss_list.append(1)
         
-        df_miss['MISS_' + model] = miss_list
+        df_miss[model] = miss_list
     
     return df_miss
 
