@@ -64,23 +64,23 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 └───README.md
 ```
 
-- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
+- [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
 
-- A pasta [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos três notebooks em formato .png.
+- [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos três notebooks em formato .png.
 
-- A pasta [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
+- [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
 
-- A pasta [output](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output) contém os mapas obtidos durante o projeto em formato .tif.
+- [output](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output) contém os mapas obtidos durante o projeto em formato .tif.
 
-- A pasta [shp](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/shp) contém o mapa geológico de campo e o polígono da área deste projeto, ambos em formato shape file.
+- [shp](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/shp) contém o mapa geológico de campo e o polígono da área deste projeto, ambos em formato shape file.
 
-- A pasta [workflow](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/workflow) contém o [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) adotado neste projeto.
+- [workflow](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/workflow) contém o [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) adotado neste projeto.
 
-- O [1º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/1-exploratory_data_analysis.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
+- [1-exploratory_data_analysis.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/1-exploratory_data_analysis.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
 
-- O [2º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
+- [2-predictive_litho_map.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
 
-- O [3º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
+- [3-model_explanation.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
 
 ## Informações complementares
 
