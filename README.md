@@ -42,7 +42,7 @@ Este repositório é estruturado da seguinte maneira:
 
 - O [3º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
 
-- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster].
+- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
 
 - A pasta [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
 
