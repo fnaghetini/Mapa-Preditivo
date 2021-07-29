@@ -1,4 +1,6 @@
-# Mapa  Geológico Preditivo
+<img src="https://logodownload.org/wp-content/uploads/2015/02/ufmg-logo-2.png" alt="Logo UFMG" width="650px">
+
+# Mapeamento Geológico Preditivo Aplicando Técnicas de Aprendizado de Máquina na Região de Diamantina, Minas Gerais, Brasil
 
 ### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
 
@@ -7,7 +9,6 @@ Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silv
 Orientadores: [Pedro Casagrande](https://github.com/casagrandepedro) & [Iago Costa](https://github.com/iagoslc)
 
 ## Resumo
-De forma geral, a teoria do aprendizado estatístico supervisionado visa aprender uma função desconhecida  **𝑓:𝑥↦𝑦**  por meio do treinamento de um agente com exemplos  **{[𝑥(1),𝑦(1)],[𝑥(2),𝑦(2)],…,[𝑥(𝑛),𝑦(𝑛)]}**  de entrada e saída da função.
 
 Nesse sentido, o objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦𝑖**  em um determinado domínio  **𝐷**  como função de sensores remotos  **𝑥𝑖**  e com base em anotações/interpretações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  feitas pelos geólogos que realizaram o mapeamento da área.
 
@@ -32,7 +33,46 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 
 ## Estrutura do Repositório
 
-Este repositório é estruturado da seguinte maneira:
+```bash
+.
+├───data
+│   ├───raster
+│   ├───data_nb1.csv
+│   ├───data_nb2.csv
+│   └───data_nb3.csv
+├───figures
+│   ├───notebook1
+│   └───notebook2
+├───functions
+│   ├───Custom_Cleaning.py
+│   ├───Custom_Export.py
+│   ├───Custom_Prediction.py
+│   ├───Custom_Preprocessing.py
+│   ├───Custom_Stats.py
+│   ├───Custom_Train_Test_Split.py
+│   ├───Custom_Validation.py
+│   └───functions.pdf
+├───output
+├───shp
+│   ├───lithology_sirgas.shp
+│   └───poligono_sirgas.shp
+├───workflow
+│   └───workflow.pdf
+├───1-exploratory_data_analysis.ipynb
+├───2-predictive_litho_map.ipynb
+├───3-model_explanation.ipynb
+└───README.md
+```
+
+- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
+
+- A pasta [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos três notebooks em formato .png.
+
+- A pasta [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
+
+- A pasta [output](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output) contém os mapas obtidos durante o projeto em formato .tif.
+
+- A pasta [shp](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/shp) contém o mapa geológico de campo e o polígono da área deste projeto, ambos em formato shape file.
 
 - A pasta [workflow](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/workflow) contém o [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) adotado neste projeto.
 
@@ -41,16 +81,6 @@ Este repositório é estruturado da seguinte maneira:
 - O [2º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
 
 - O [3º notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
-
-- A pasta [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
-
-- A pasta [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
-
-- A pasta [shp](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/shp) contém o mapa geológico de campo e o polígono da área deste projeto, ambos em formato shape file.
-
-- A pasta [output](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output) contém os mapas obtidos durante o projeto em formato .tif.
-
-- A pasta [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos três notebooks em formato .png.
 
 ## Informações complementares
 
@@ -100,7 +130,7 @@ Este repositório é estruturado da seguinte maneira:
 |   G  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - VERDE                                  |
 |   B  |   -  | [USGS](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-legacy-tri-decadal-landsat-orthorectified-mosaics-etm?qt-science_center_objects=0#qt-science_center_objects)|Landsat 7 Sensor EMT+ - AZUL                                   |
 
-## Versões utilizadas
+## Versões
 
 - [python v3.6.10](https://docs.python.org/release/3.6.10/)
 - [conda v4.9.2](https://docs.conda.io/projects/conda/en/master/release-notes.html)
