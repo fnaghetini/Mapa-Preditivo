@@ -82,9 +82,9 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 
 - [3-model_explanation.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
 
-## Informações complementares
+## Informações Complementares
 
-### Sistema de referência
+#### Sistema de Referência
 
 - EPSG: 31983
 - Projeção: UTM
@@ -95,7 +95,7 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 - Resolução: 62.5 m x 62.5 m
 - Extensão: (xmin = 634163.67, ymin = 7969052.06, xmax = 640038.70, ymax = 7983240.00)
 
-### Unidades litoestratigráficas
+#### Unidades Litoestratigráficas
 
 |  ID  |  Sigla   |  Código  |                 Unidade                  |      Hexadecimal      |      RGB      |
 |:----:|:--------:|:--------:|:----------------------------------------:|:---------------------:|:-------------:|
@@ -106,7 +106,7 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 |   5  |  Fm_SB   |  PP4esb  |         Formação Sopa Brumadinho         |        #9b0000        | (000,000,255) |
 |   6  |  Fm_GM   |  PP4egm  |         Formação Galho do Miguel         |        #73ffdf        | (115,255,223) |
 
-### Dicionário de features
+#### Dicionário de Features
 
 |    Feature    |  Unidade  |                         Fonte                         |                           Descrição                           |
 |:-------------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
