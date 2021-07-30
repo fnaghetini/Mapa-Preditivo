@@ -1,6 +1,6 @@
 <img src="https://logodownload.org/wp-content/uploads/2015/02/ufmg-logo-2.png" alt="Logo UFMG" width="650px">
 
-# Mapeamento Geológico Preditivo Aplicando Técnicas de Aprendizado de Máquina na Região de Diamantina, Minas Gerais, Brasil
+# Mapeamento Geológico Preditivo Aplicando Técnicas de Aprendizado de Máquina Supervisionado na Região de Diamantina, Minas Gerais, Brasil
 
 ### Trabalho de Conclusão de Curso - Geologia / IGC / UFMG
 
