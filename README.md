@@ -42,7 +42,8 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 │   └───data_nb3.csv
 ├───figures
 │   ├───notebook1
-│   └───notebook2
+│   ├───notebook2
+│   └───notebook3
 ├───functions
 │   ├───Custom_Cleaning.py
 │   ├───Custom_Export.py
