@@ -26,9 +26,9 @@ Retorna:
 def df2Raster(df, filename, col = None):
 
     # Diretórios
-    csv_path = f"output/{filename}.csv"
-    vrt_path = f"output/{filename}.vrt"
-    tif_path = f"output/{filename}.tif"
+    csv_path = f"output/rasters/{filename}.csv"
+    vrt_path = f"output/rasters/{filename}.vrt"
+    tif_path = f"output/rasters/{filename}.tif"
 
     # Ordenamento do dataframe no padrão GDAL
     df = df[['X','Y',col]]
