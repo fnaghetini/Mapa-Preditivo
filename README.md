@@ -53,6 +53,8 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 │   ├───Custom_Validation.py
 │   └───functions.pdf
 ├───output
+│   ├───points
+│   └───rasters
 ├───shp
 │   ├───lithology_sirgas.shp
 │   └───poligono_sirgas.shp
