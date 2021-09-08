@@ -22,7 +22,7 @@ O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/wor
 4. Explicação do modelo
 5. Pós-processamento
 
-O modelo **XGBoost** apresentou a melhor performance com relação às métricas avaliadas:
+O modelo **XGBoost** apresentou a melhor performance com relação às métricas avaliadas abaixo e à entropia cruzada:
 
 |        Métricas       | XGBoost |
 |:---------------------:|:-------:|
@@ -39,7 +39,9 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 │   ├───raster
 │   ├───data_nb1.csv
 │   ├───data_nb2.csv
-│   └───data_nb3.csv
+│   ├───data_nb3.csv
+│   ├───test.csv
+│   └───train.csv
 ├───figures
 │   ├───notebook1
 │   ├───notebook2
@@ -67,7 +69,7 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 └───README.md
 ```
 
-- [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
+- [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks e os dados de treino e teste. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
 
 - [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos três notebooks em formato .png.
 
