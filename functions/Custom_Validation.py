@@ -92,7 +92,7 @@ def testReport(dic_ŷ, y_test):
     plotModelScores(report :: dataframe, models :: list, col :: string, ec :: string)
 
 Plota um gráfico de barras dos modelos organizados em ordem descrescente com relação os seus
-respectivos scores médios de performance.
+respectivos F1-scores.
 
 Parâmetros:
 - report : dataframe de report das performances
@@ -101,19 +101,19 @@ Parâmetros:
 - ec : cor da borda do gráfico de barras
 
 Retorna:
-- Gráfico de barras com os scores médios de de performance para cada um dos modelos
+- Gráfico de barras com os valores F1-score de para cada um dos modelos
 
 """
 
 def plotModelScores(report, models, col, ec):
 
-    mean_scores = [report[m].mean() for m in models]
-    dic_mean_scores = {'MODEL' : models, 'MEAN' : mean_scores}
-    df_mean_scores = pd.DataFrame(dic_mean_scores).sort_values('MEAN', ascending = False)
+    f1_scores = list(report.iloc[0,:])
+    dic_f1_scores = {'MODEL' : models, 'F1SCORE' : f1_scores}
+    df_mean_scores = pd.DataFrame(dic_f1_scores).sort_values('F1SCORE', ascending = False)
 
     plt.figure(figsize = (9,4))
-    plt.bar('MODEL', 'MEAN', data = df_mean_scores, color = col, edgecolor = ec)
-    plt.ylabel('Score Médio', size = 14)
+    plt.bar('MODEL', 'F1SCORE', data = df_mean_scores, color = col, edgecolor = ec)
+    plt.ylabel('F1-Score', size = 14)
     plt.yticks(np.arange(0.0,1.1,0.1))
 
     plt.tight_layout();
