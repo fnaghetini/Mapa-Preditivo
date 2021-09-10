@@ -26,10 +26,10 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 
 |        Métricas       | XGBoost |
 |:---------------------:|:-------:|
-|        Acurácia       |   0.69  |
-|        F1-Score       |   0.70  |
+|        Acurácia       |   0.70  |
+|        F1-Score       |   0.71  |
 |        Precisão       |   0.74  |
-|         Recall        |   0.69  |
+|         Recall        |   0.70  |
 
 ## Estrutura do Repositório
 
@@ -102,14 +102,14 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 
 #### Unidades Litoestratigráficas
 
-|  ID  |  Código  |                 Unidade                  |      RGB      |
-|:----:|:--------:|:----------------------------------------:|:-------------:|
-|   1  |  MAcgg   |        Complexo Granito-Gnáissico        | (255,115,223) |
-|   2  |  PP3csbg |         Formação Barão de Guaicuí        | (190,210,255) |
-|   3  |  PP34b   |          Formação Bandeirinha            |  (230,76,0)   |
-|   4  |  PP4esjc |       Formação São João da Chapada       |  (255,170,0)  |
-|   5  |  PP4esb  |         Formação Sopa Brumadinho         | (255,255,115) |
-|   6  |  PP4egm  |         Formação Galho do Miguel         |  (76,230,0)   |
+|  ID  |  Código  |                 Unidade                  |      RGB      | Hexadecimal |
+|:----:|:--------:|:----------------------------------------:|:-------------:|:-----------:|
+|   1  |  MAcgg   |        Complexo Granito-Gnáissico        | (255,115,223) |   #ff73df   |
+|   2  |  PP3csbg |         Formação Barão de Guaicuí        | (190,210,255) |   #bed2ff   |
+|   3  |  PP34b   |          Formação Bandeirinha            |  (230,76,0)   |   #e64d00   |
+|   4  |  PP4esjc |       Formação São João da Chapada       |  (255,170,0)  |   #ffaa00   |
+|   5  |  PP4esb  |         Formação Sopa Brumadinho         | (255,255,115) |   #ffff73   |
+|   6  |  PP4egm  |         Formação Galho do Miguel         |  (76,230,0)   |   #4de600   |
 
 #### Dicionário de Variáveis
 
