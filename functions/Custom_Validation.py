@@ -113,7 +113,7 @@ def plotModelScores(report, models, col, ec):
 
     plt.figure(figsize = (9,4))
     plt.bar('MODEL', 'F1SCORE', data = df_mean_scores, color = col, edgecolor = ec)
-    plt.ylabel('F1-Score', size = 14)
+    plt.ylabel('F1-score', size = 14)
     plt.yticks(np.arange(0.0,1.1,0.1))
 
     plt.tight_layout();

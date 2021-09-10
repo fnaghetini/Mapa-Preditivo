@@ -59,8 +59,8 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 │   ├───points
 │   └───rasters
 ├───shp
-│   ├───lithology_sirgas.shp
-│   └───poligono_sirgas.shp
+│   ├───boundary.shp
+│   └───lithology.shp
 ├───workflow
 │   └───workflow.pdf
 ├───1-exploratory_data_analysis.ipynb
@@ -102,19 +102,21 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 
 #### Unidades Litoestratigráficas
 
-|  ID  |  Sigla   |  Código  |                 Unidade                  |      Hexadecimal      |      RGB      |
-|:----:|:--------:|:--------:|:----------------------------------------:|:---------------------:|:-------------:|
-|   1  |  Cx_GG   |  MAcgg   |        Complexo Granito-Gnáissico        |        #fabee8        | (255,190,232) |
-|   2  |  Fm_BG   |  PP3csbg |         Formação Barão de Guaicuí        |        #cccccc        | (204,204,204) |
-|   3  |  Fm_B    |  PP34b   |          Formação Bandeirinha            |        #e600a9        | (230,000,169) |
-|   4  |  Fm_SJC  |  PP4esjc |       Formação São João da Chapada       |        #ffff00        | (255,255,000) |
-|   5  |  Fm_SB   |  PP4esb  |         Formação Sopa Brumadinho         |        #9b0000        | (000,000,255) |
-|   6  |  Fm_GM   |  PP4egm  |         Formação Galho do Miguel         |        #73ffdf        | (115,255,223) |
+|  ID  |  Código  |                 Unidade                  |      RGB      |
+|:----:|:--------:|:----------------------------------------:|:-------------:|
+|   1  |  MAcgg   |        Complexo Granito-Gnáissico        | (255,115,223) |
+|   2  |  PP3csbg |         Formação Barão de Guaicuí        | (190,210,255) |
+|   3  |  PP34b   |          Formação Bandeirinha            |  (230,76,0)   |
+|   4  |  PP4esjc |       Formação São João da Chapada       |  (255,170,0)  |
+|   5  |  PP4esb  |         Formação Sopa Brumadinho         | (255,255,115) |
+|   6  |  PP4egm  |         Formação Galho do Miguel         |  (76,230,0)   |
 
-#### Dicionário de Features
+#### Dicionário de Variáveis
 
-|   Feature  |  Unidade  |                         Fonte                         |                           Descrição                           |
+|  Variável  |  Unidade  |                         Fonte                         |                           Descrição                           |
 |:----------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
+|    X       |    m      |                           -                           |Coordenada X (SIRGAS2000 Zona 23S)                             |
+|    Y       |    m      |                           -                           |Coordenada Y (SIRGAS2000 Zona 23S)                             |
 |    GT      |   nT/m    | Biblioteca UFMG                                       |Gradiente total                                                |
 |    K       |    %      | Biblioteca UFMG                                       |Potássio                                                       |
 |    TH      |   ppm     | Biblioteca UFMG                                       |Tório                                                          |
@@ -129,6 +131,8 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 |    B04     |    -      | [INPE](http://www.dgi.inpe.br/catalogo/)              |Landsat 8 Sensor OLI - VERMELHO (0.630 - 0.680 μm)             |
 |    B06     |    -      | [INPE](http://www.dgi.inpe.br/catalogo/)              |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (1.560 - 1.660 μm)  |
 |    B07     |    -      | [INPE](http://www.dgi.inpe.br/catalogo/)              |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (2.100 - 2.300 μm)  |
+|   TARGET   |    -      | Mapa Integrado Estágio Supervisionado (2018)          |Código numérico das unidades litoestratigráficas               |
+|    COD     |    -      | Mapa Integrado Estágio Supervisionado (2018)          |Acrônimo das unidades litoestratigráficas                      |     
 
 ## Versões
 
