@@ -67,7 +67,7 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 ├───1-exploratory_data_analysis.ipynb
 ├───2-predictive_litho_map.ipynb
 ├───3-model_explanation.ipynb
-├───4-geospatial_issues.ipynb
+├───4-geospatial_issues.jl
 └───README.md
 ```
 
