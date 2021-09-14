@@ -45,7 +45,8 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 ├───figures
 │   ├───notebook1
 │   ├───notebook2
-│   └───notebook3
+│   ├───notebook3
+│   └───notebook4
 ├───functions
 │   ├───Custom_Cleaning.py
 │   ├───Custom_Export.py
@@ -66,6 +67,7 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 ├───1-exploratory_data_analysis.ipynb
 ├───2-predictive_litho_map.ipynb
 ├───3-model_explanation.ipynb
+├───4-geospatial_issues.jl
 └───README.md
 ```
 
@@ -86,6 +88,8 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 - [2-predictive_litho_map.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
 
 - [3-model_explanation.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
+
+- [4-geospatial_issues.jl](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) apresenta uma análise simples de fenômenos comuns em dados geoespaciais.
 
 ## Informações Complementares
 
