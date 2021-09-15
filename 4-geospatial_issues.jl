@@ -168,9 +168,7 @@ end;
 # ╔═╡ ae10ce94-bfab-4ee2-9049-234bf3d244b8
 md""" ### Verificação de autocorrelação espacial
 
-Abaixo são apresentados dois variogramas direcionais N-S, sendo um deles associado ao conjunto de treino e o outro ao conjunto de teste.
-
-O objetivo é verificar a existência de autocorrelação espacial nos conjuntos de treino e teste. A autocorrelação espacial é uma propriedade comum de variáveis regionalizadas.
+Abaixo são apresentados os variogramas experimentais N-S. O objetivo é verificar a existência de correlação espacial nas variáveis independentes. Esse fenômeno é uma propriedade comum de variáveis regionalizadas.
 
 """
 
@@ -181,28 +179,23 @@ Variograma da variável $(@bind Z Select(string.(FEAT), default="K"))
 
 # ╔═╡ eb9705da-ddcc-4af9-a7d6-08843e5a8769
 begin
+	# concatenação dos conjuntos de treino e teste
+	data = [train[!,[COORD;FEAT]]
+		    test[!,[COORD;FEAT]]]
+	
+	# georrefrenciamento dos dados
+	data_georef = georef(data, (:X,:Y))
+	
 	# semente aleatória
 	Random.seed!(42)
 	
-	# variograma direcional N-S do conjunto de treino
-	γ₁ = DirectionalVariogram(sph2cart(0), train_georef, Symbol(Z),
-		                      maxlag = 3000, nlags = 13)
+	# variograma experimental N-S
+	γ = DirectionalVariogram(sph2cart(0), data_georef, Symbol(Z),
+		                      maxlag = 4000, nlags = 20)
 	
-	# variograma direcional N-S do conjunto de teste
-	γ₂ = DirectionalVariogram(sph2cart(0), test_georef, Symbol(Z),
-		                      maxlag = 3000, nlags = 13)
 	
-	# configurações de plotagem do variograma do conjunto de treino
-	v1 = plot(γ₁, color = :red, ms = 4, title="Treino", legend=false,
-		      xlims=(0,3200), ylims=(0,1.5))
-	
-	# configurações de plotagem do variograma do conjunto de teste
-	v2 = plot(γ₂, color = :blue, ms = 4, title="Teste", legend=false,
-		      xlims=(0,3200), ylims=(0,1.5))
-	
-	# plotagem dos variogramas direcionais
-	plot(v1, v2, link = :both, layout=(2,1), size = (600, 600))
-	
+	# configurações de plotagem do variograma
+	plot(γ, color = :green, ms = 4, legend=false, xlims=(0,4200))
 	
 end
 
@@ -211,7 +204,7 @@ md"""
 
 * Nota-se que, para qualquer variável selecionada, o variograma direcional resultante apresenta uma clara estrutura espacial.
 
-* Portanto, pode-se afirmar que as *features* utilizadas no projeto apresentam uma correlação espacial significativa, com alcances entre 800 e 1500 m. Isso é coerente, uma vez que os próprios mapas de localizaçao dessas variáveis independentes apresentam uma determinada estrutura espacial.
+* Portanto, pode-se afirmar que as *features* utilizadas no projeto apresentam uma correlação espacial significativa. Isso é coerente, uma vez que os próprios mapas de localizaçao dessas variáveis apresentam uma determinada estrutura espacial.
 
 """
 
