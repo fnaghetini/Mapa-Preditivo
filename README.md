@@ -12,7 +12,7 @@ Orientadores: [Pedro Casagrande](https://github.com/casagrandepedro) & [Iago Cos
 
 O objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦**  em um determinado domínio  **𝐷**  como função de sensores remotos  **X**  e com base em anotações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  interpretadas pelos geólogos responsáveis pelo mapeamento da área.
 
-O produto final é um **mapa geológico preditivo 1:25.000** da área de interesse que pode ser utilizado como um meio de reconciliação entre os dados/interpretações de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa preditivo podem fornecer insights e orientar futuras campanhas de mapeamento na região.
+O produto final é um **mapa geológico preditivo 1:25.000** da área de interesse que pode ser utilizado como um meio de reconciliação entre os dados/interpretações de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa preditivo podem fornecer *insights* e orientar futuras campanhas de mapeamento na região.
 
 O fluxo de trabalho deste projeto pode ser consultado [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf).
 
@@ -27,7 +27,7 @@ Oito classificadores foram comparados entre si, sendo eles:
 - *XGBoost* (XGB)
 - *Multilayer Perceptrons* (MLP)
 
-Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores performances com relação às métricas avaliadas. Os scores de validação cruzada para esses modelos são apresentados abaixo:
+Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores performances com relação às métricas avaliadas. Os *scores* de validação cruzada para esses modelos são apresentados abaixo:
 
 |        Métricas       | XGBoost | Random Forest |
 |:---------------------:|:-------:|:-------------:|
@@ -76,11 +76,11 @@ Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores per
 └───README.md
 ```
 
-- [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos três notebooks e os dados de treino e teste. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
+- [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos quatro *notebooks* e os dados de treino e teste. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
 
-- [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos três notebooks em formato .png.
+- [figures](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/figures) contém todos os gráficos e mapas gerados nos quatro *notebooks* em formato .png.
 
-- [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas em ambos os notebooks. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos notebooks, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
+- [functions](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/functions) contém todas as funções auxiliares utilizadas nos *notebooks*. As funções auxiliares adotam o padrão *lowerCamelCase* para diferenciá-las das funções nativas e externas do Python. A única exceção é a classe auxiliar `MaskedPCA` que, por sua vez, adota o padrão *UpperCamelCase*. Toda vez que uma função auxiliar é utilizada em um dos *notebooks*, haverá um hiperlink que aponta para o arquivo `.py` fonte dessa função. Clique [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/functions/functions.pdf) para visualizar o mapa mental das funções auxiliares.
 
 - [output](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output) contém os mapas obtidos durante o projeto como [pontos](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output/points) e [rasters](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/output/rasters).
 
@@ -90,37 +90,37 @@ Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores per
 
 - [1-exploratory_data_analysis.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/1-exploratory_data_analysis.ipynb) contém as etapas de limpeza e análise exploratória dos dados.
 
-- [2-predictive_litho_map.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) abrange desde a etapa de pré-processamento dos dados até a seleção do modelo de melhor performance.
+- [2-predictive_litho_map.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) abrange as etapas de pré-processamento e modelagem dos dados. Os mapas geológicos preditivos são gerados aqui.
 
-- [3-model_explanation.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
+- [3-model_explanation.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta os resultados da interpretação do classificador *XGBoost* com o *framework* SHAP.
 
 - [4-geospatial_issues.jl](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) apresenta uma análise interativa simples de fenômenos comuns em dados geoespaciais.
 
 ## Instruções
 
 ### Python
-Grande parte do trabalho (três primeiros notebooks) foi desenvolvida em linguagem [Python](https://www.python.org/), em ambiente [Jupyter Notebook](https://jupyter.org/). Caso deseje executar os notebooks localmente, aconselhamos a [instalação do Python via Anaconda](https://docs.anaconda.com/anaconda/install/windows/). A vantagem desse distribuidor é que grande parte das bibliotecas utilizadas no trabalho são automaticamente instaladas em sua máquina.
+Grande parte do trabalho (três primeiros *notebooks*) foi desenvolvida em linguagem [Python](https://www.python.org/), em ambiente [Jupyter Notebook](https://jupyter.org/). Caso deseje executar os notebooks localmente, aconselhamos a [instalação do Python via Anaconda](https://docs.anaconda.com/anaconda/install/windows/). A vantagem desse distribuidor é que grande parte das bibliotecas utilizadas no trabalho são automaticamente instaladas em sua máquina.
 
-Todas as bibliotecas utilizadas, bem como suas respectivas versões são apresentadas ao final deste documento, em **Versões**. As bibliotecas que não são instaladas automaticamente junto ao Anaconda apresentam um asterisco.
+Todas as bibliotecas utilizadas, bem como suas respectivas versões são apresentadas ao final deste documento, em **Versões**. As bibliotecas que não são instaladas automaticamente junto ao Anaconda apresentam um "*".
 
-Opcionalmente, é possível visualizar os notebooks no próprio GitHub ou, ainda, executá-los no ambiente [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). Entretanto, nem todos os recursos presentes estarão habilitados em ambos os casos.
+Opcionalmente, é possível visualizar os *notebooks* no próprio GitHub ou, ainda, executá-los no ambiente [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). Entretanto, nem todos os recursos presentes estarão habilitados em ambos os casos.
 
 ### Julia
-Apenas o [quarto notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) foi desenvolvido em linguagem [Julia](https://julialang.org/), em ambiente [Pluto](https://github.com/fonsp/Pluto.jl). Para executar esse notebook localmente, primeiro [instale Julia 1.6](https://julialang.org/downloads/). Em seguida, no Julia REPL, execute os seguintes comandos para instalar o Pluto:
+Apenas o [quarto *notebook*](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) foi desenvolvido em linguagem [Julia](https://julialang.org/), em ambiente [Pluto](https://github.com/fonsp/Pluto.jl). Para executar esse *notebook* localmente, primeiro [instale Julia 1.6](https://julialang.org/downloads/). Em seguida, no Julia REPL, execute os seguintes comandos para instalar o Pluto:
 
 ```julia
 julia> using Pkg
 julia> Pkg.add("Pluto")
 ```
 
-Em seguida, abra o ambiente Pluto:
+Em seguida, execute o Pluto:
 
 ```julia
 julia> using Pluto
 julia> Pluto.run()
 ```
 
-**Nota:** Não se preocupe com as versões das bibliotecas Julia utilizadas. Como o Pluto apresenta seu próprio gerenciador de pacotes, ao abrir o notebook pela primeira vez, todos os pacotes necessários serão automaticamente instalados nas versões apropriadas (isso pode demorar alguns minutos!).
+**Nota:** Não se preocupe com as versões das bibliotecas Julia utilizadas. Como o Pluto apresenta seu próprio gerenciador de pacotes, ao abrir o *notebook* pela primeira vez, todos os pacotes necessários serão automaticamente instalados nas versões apropriadas (isso pode demorar alguns minutos!).
 
 **Importante:** A versão do Pluto deve ser igual ou maior à **0.16.0**. Caso queira consultar sua versão, no Julia REPL, digite:
 
