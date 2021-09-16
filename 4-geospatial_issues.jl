@@ -21,10 +21,6 @@ begin
 	using Plots; gr(format="png")
 end;
 
-# ╔═╡ 504fb623-6b10-4905-8ded-5bc7a89b693e
-PlutoUI.TableOfContents(aside=true, title="Sumário",
-						indent=true, depth=3)
-
 # ╔═╡ cb520500-14bc-11ec-3ceb-d50b22b326dc
 md"""
 
@@ -36,6 +32,10 @@ Autores: [Franco Naghetini](https://github.com/fnaghetini) e [Guilherme Silveira
 
 """
 
+# ╔═╡ 504fb623-6b10-4905-8ded-5bc7a89b693e
+PlutoUI.TableOfContents(aside=true, title="Sumário",
+						indent=true, depth=3)
+
 # ╔═╡ 04893b21-d20c-4084-ad58-f060c129af5f
 md"""
 
@@ -45,32 +45,31 @@ Sabe-se que a aplicação de técnicas de Aprendizado de Máquina para a soluç�
 
 1. Autocorrelação espacial entre amostras de uma mesma variável
 
-2. *Shift* da distribuição bivariada entre os conjuntos de treino e teste
+2. Distorção da distribuição bivariada entre os conjuntos de treino e teste
 
-A verificação desses fenômenos é importante, uma vez que a utilização de técnicas de reamostragem clássicas (*e.g.* validação cruzada k-fold) em problemas geoespaciais pode gerar estimativas superotimistas do erro de generalização.
+**Nota:** Algumas células deste notebook foram ocultadas. Caso deseje visualizar alguma delas, clique no ícone do olho, localizado à esquerda da célula em questão.
 
 """
 
 # ╔═╡ 5810feee-79a6-400b-9d56-4eafad2f8d3a
 md"""### Importação dos dados
 
-Nesta seção, os dados de treino e teste são importados.
+Abaixo, os dados de treino e teste gerados no [segundo notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/2-predictive_litho_map.ipynb) são importados.
 
 """
 
 # ╔═╡ a88ea1b6-9291-4485-a573-68be7f34529e
 begin
-	# importação dos dados de treino e teste
 	train = CSV.File("data/train.csv") |> DataFrame
 	test = CSV.File("data/test.csv") |> DataFrame
 end;
 
 # ╔═╡ 77be9d2b-8ba2-4b29-86e9-ad013b83202f
-# 5 primeiras linhas dos dados de treino
+# dados de treino
 first(train, 5)
 
 # ╔═╡ bc5c15d5-a6df-4051-a068-343c22efff8a
-# 5 primeiras linhas dos dados de teste
+# dados de teste
 first(test, 5)
 
 # ╔═╡ fa317980-08e7-42d1-bfa2-3c33b4d483b1
@@ -78,9 +77,9 @@ md""" ### Pré-processamento
 
 Nesta seção, os dados de treino e teste são submetidos a duas etapas simples de pré-processamento:
 
-1. Seleção das variáveis que serão utilizadas
+1. Seleção das variáveis de interesse
 
-2. Estandardização das features
+2. Estandardização das variáveis
 
 Ressalta-se que todas as variáveis, exceto as bandas Landsat 8 e a variável dependente são selecionadas na primeira etapa. Em seguida as features selecionadas são estandardizadas e passam a seguir uma distribuição normal padrão, com μ = 0 e σ = 1.
 
@@ -89,7 +88,7 @@ Ressalta-se que todas as variáveis, exceto as bandas Landsat 8 e a variável de
 # ╔═╡ c71cc549-2710-4aba-a10e-204056b937c9
 begin
 	
-	# variáveis utilzadas
+	# variáveis de interesse
 	COORD = [:X,:Y]
 	FEAT = [:GT,:K,:TH,:U,:CT,:U_K,:TH_K,:U_TH,:MDT]
 	
@@ -116,11 +115,11 @@ begin
 end;
 
 # ╔═╡ 72f6bdec-2236-4008-8f0e-da1fe4d39c2e
-md""" ### Verificação de *shift* na distribuição bivariada
+md""" ### Verificação de shift na distribuição bivariada
 
-Abaixo são apresentados dois diagramas de dispersão, sendo o da esquerda relacionado ao conjunto de treino e o da direita ao conjunto de teste.
+Na *Figura 01*, são apresentados dois diagramas de dispersão, sendo o da esquerda relacionado ao conjunto de treino e o da direita ao conjunto de teste.
 
-O objetivo é verificar se existe algum tipo de *shift* da distribuição bivariada entre os conjuntos de treino e teste. Sabe-se que esse fenômeno é comum em dados regionalizados.
+O objetivo é verificar se existe algum tipo de distorção (shift) da distribuição bivariada entre os conjuntos de treino e teste.
 """
 
 # ╔═╡ e488e530-7945-420f-92f6-eee3997ff82d
@@ -147,71 +146,70 @@ begin
 	
 end
 
+# ╔═╡ 5dfa7583-7716-4009-9aa2-48d1133ca4d0
+md" **Figura 01:** Distribuição bivariada entre $X₁ e $X₂ nos conjuntos de treino (vermelho) e teste (azul). "
+
 # ╔═╡ 341990c2-8adf-4f6e-b488-f0723942ad9e
 md"""
 
-* Nota-se que, para quaisquer variáveis selecionadas, as distribuições bivariadas resultantes são semelhantes nos conjuntos de treino e teste. Essa observação é mais clara no caso dos canais radiométricos (*i.e.* U, Th e K).
+* Nota-se que, para quaisquer variáveis selecionadas, as distribuições bivariadas resultantes são semelhantes nos conjuntos de treino e teste. Essa observação é mais clara no caso dos canais radiométricos (i.e. `U`, `TH` e `K`).
 
-* Portanto, pode-se dizer que o *shift* da distribuição bivariada entre os conjuntos de treino e teste é pouco expressivo ou inexistente.
+* Portanto, pode-se dizer que o shift da distribuição bivariada entre os conjuntos de treino e teste é pouco expressivo ou inexistente. Isso era de fato esperado, uma vez que ambos os conjuntos foram reamostrados de uma mesma área.
 
 """
 
 # ╔═╡ 1b23c0a0-73af-418a-a425-e7d94d3602e9
 begin
-	# Converte coordenadas esféricas para Cartesianas
+	# Converte coordenadas geológicas em cartesianas
 	function sph2cart(azi)
 		θ = deg2rad(azi)
 		sin(θ), cos(θ)
 	end
 end;
 
-# ╔═╡ ae10ce94-bfab-4ee2-9049-234bf3d244b8
-md""" ### Verificação de autocorrelação espacial
-
-Abaixo são apresentados dois variogramas direcionais N-S, sendo um deles associado ao conjunto de treino e o outro ao conjunto de teste.
-
-O objetivo é verificar a existência de autocorrelação espacial nos conjuntos de treino e teste. A autocorrelação espacial é uma propriedade comum de variáveis regionalizadas.
-
-"""
-
 # ╔═╡ a8a02cd5-b512-434b-92dc-84e990e520ce
 md"""
 Variograma da variável $(@bind Z Select(string.(FEAT), default="K"))
 """
 
+# ╔═╡ ae10ce94-bfab-4ee2-9049-234bf3d244b8
+md""" ### Verificação de autocorrelação espacial
+
+A *Figura 02* apresenta o variograma experimental N-S da variável $Z. O objetivo é verificar a existência de correlação espacial nas variáveis independentes.
+
+"""
+
 # ╔═╡ eb9705da-ddcc-4af9-a7d6-08843e5a8769
 begin
+	# concatenação dos conjuntos de treino e teste
+	data = [train[!,[COORD;FEAT]]
+		    test[!,[COORD;FEAT]]]
+	
+	# georrefrenciamento dos dados
+	data_georef = georef(data, (:X,:Y))
+	
 	# semente aleatória
 	Random.seed!(42)
 	
-	# variograma direcional N-S do conjunto de treino
-	γ₁ = DirectionalVariogram(sph2cart(0), train_georef, Symbol(Z),
-		                      maxlag = 3000, nlags = 13)
+	# variograma experimental N-S
+	γ = DirectionalVariogram(sph2cart(0), data_georef, Symbol(Z),
+		                      maxlag = 4000, nlags = 20)
 	
-	# variograma direcional N-S do conjunto de teste
-	γ₂ = DirectionalVariogram(sph2cart(0), test_georef, Symbol(Z),
-		                      maxlag = 3000, nlags = 13)
 	
-	# configurações de plotagem do variograma do conjunto de treino
-	v1 = plot(γ₁, color = :red, ms = 4, title="Treino", legend=false,
-		      xlims=(0,3200), ylims=(0,1.5))
-	
-	# configurações de plotagem do variograma do conjunto de teste
-	v2 = plot(γ₂, color = :blue, ms = 4, title="Teste", legend=false,
-		      xlims=(0,3200), ylims=(0,1.5))
-	
-	# plotagem dos variogramas direcionais
-	plot(v1, v2, link = :both, layout=(2,1), size = (600, 600))
-	
+	# configurações de plotagem do variograma
+	plot(γ, color = :green, ms = 4, legend=false, xlims=(0,4200))
 	
 end
+
+# ╔═╡ d4155a15-203d-451c-9156-783407f1e5fe
+md" **Figura 02:** Variograma experimental N-S da variável $Z. "
 
 # ╔═╡ 5497720d-5333-4368-9625-ae8a2b9da7c4
 md"""
 
 * Nota-se que, para qualquer variável selecionada, o variograma direcional resultante apresenta uma clara estrutura espacial.
 
-* Portanto, pode-se afirmar que as *features* utilizadas no projeto apresentam uma correlação espacial significativa, com alcances entre 800 e 1500 m. Isso é coerente, uma vez que os próprios mapas de localizaçao dessas variáveis independentes apresentam uma determinada estrutura espacial.
+* Portanto, pode-se afirmar que as variáveis utilizadas no projeto apresentam uma correlação espacial significativa. Isso já era esperado, uma vez que os próprios mapas de localizaçao dessas variáveis apresentam estrutura espacial.
 
 """
 
@@ -1638,8 +1636,8 @@ version = "0.9.1+5"
 
 # ╔═╡ Cell order:
 # ╟─ede1ab03-87e3-4c42-8e4d-51b3e8829aea
-# ╟─504fb623-6b10-4905-8ded-5bc7a89b693e
 # ╟─cb520500-14bc-11ec-3ceb-d50b22b326dc
+# ╟─504fb623-6b10-4905-8ded-5bc7a89b693e
 # ╟─04893b21-d20c-4084-ad58-f060c129af5f
 # ╟─5810feee-79a6-400b-9d56-4eafad2f8d3a
 # ╠═a88ea1b6-9291-4485-a573-68be7f34529e
@@ -1650,11 +1648,13 @@ version = "0.9.1+5"
 # ╟─72f6bdec-2236-4008-8f0e-da1fe4d39c2e
 # ╟─e488e530-7945-420f-92f6-eee3997ff82d
 # ╟─baee023f-3532-4294-a7c3-5fd5e0cc6ada
+# ╟─5dfa7583-7716-4009-9aa2-48d1133ca4d0
 # ╟─341990c2-8adf-4f6e-b488-f0723942ad9e
 # ╟─1b23c0a0-73af-418a-a425-e7d94d3602e9
 # ╟─ae10ce94-bfab-4ee2-9049-234bf3d244b8
 # ╟─a8a02cd5-b512-434b-92dc-84e990e520ce
 # ╟─eb9705da-ddcc-4af9-a7d6-08843e5a8769
+# ╟─d4155a15-203d-451c-9156-783407f1e5fe
 # ╟─5497720d-5333-4368-9625-ae8a2b9da7c4
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
