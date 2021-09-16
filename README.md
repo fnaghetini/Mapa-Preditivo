@@ -8,28 +8,33 @@ Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silv
 
 Orientadores: [Pedro Casagrande](https://github.com/casagrandepedro) & [Iago Costa](https://github.com/iagoslc)
 
-## Resumo
+## Aspectos Gerais
 
-O objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦𝑖**  em um determinado domínio  **𝐷**  como função de sensores remotos  **𝑥𝑖**  e com base em anotações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  interpretadas pelos geólogos responsáveis pelo mapeamento da área.
+O objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦**  em um determinado domínio  **𝐷**  como função de sensores remotos  **X**  e com base em anotações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  interpretadas pelos geólogos responsáveis pelo mapeamento da área.
 
-O produto final é um **mapa geológico preditivo 1:25.000 da região de Diamantina (MG)** que pode ser utilizado como um meio de reconciliação entre os dados/interpretações de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa preditivo podem fornecer insights e orientar futuras campanhas de mapeamento na região.
+O produto final é um **mapa geológico preditivo 1:25.000** da área de interesse que pode ser utilizado como um meio de reconciliação entre os dados/interpretações de campo e os sensores remotos. Nesse sentido, as inconsistências entre o mapa geológico e o mapa preditivo podem fornecer insights e orientar futuras campanhas de mapeamento na região.
 
-O [fluxo de trabalho](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf) deste projeto é dividido em cinco etapas principais:
+O fluxo de trabalho deste projeto pode ser consultado [aqui](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/workflow/workflow.pdf).
 
-1. Aquisição e preparação dos sensores remotos
-2. Limpeza e análise exploratória dos dados
-3. Pré-processamento e modelagem dos dados
-4. Explicação do modelo
-5. Pós-processamento
+Oito classificadores foram comparados entre si, sendo eles:
 
-O modelo **XGBoost** apresentou a melhor performance com relação às métricas avaliadas abaixo e à entropia cruzada:
+- Regressão Logística (RL)
+- *Decision Tree* (DT)
+- *Naive Bayes* (NB)
+- *K-Nearest Neighbors* (KNN)
+- *Support Vector Machines* (SVM)
+- *Random Forest* (RF)
+- *XGBoost* (XGB)
+- *Multilayer Perceptrons* (MLP)
 
-|        Métricas       | XGBoost |
-|:---------------------:|:-------:|
-|        Acurácia       |   0.70  |
-|        F1-Score       |   0.71  |
-|        Precisão       |   0.74  |
-|         Recall        |   0.70  |
+Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores performances com relação às métricas avaliadas. Os scores de validação cruzada para esses modelos são apresentados abaixo:
+
+|        Métricas       | XGBoost | Random Forest |
+|:---------------------:|:-------:|:-------------:|
+|        F1-score       |   0.77  |      0.78     |
+|        Precisão       |   0.78  |      0.78     |
+|         Recall        |   0.77  |      0.78     |
+|        Acurácia       |   0.77  |      0.78     |
 
 ## Estrutura do Repositório
 
@@ -89,7 +94,40 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 
 - [3-model_explanation.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta as explicações do modelo selecionado.
 
-- [4-geospatial_issues.jl](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) apresenta uma análise simples de fenômenos comuns em dados geoespaciais.
+- [4-geospatial_issues.jl](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) apresenta uma análise interativa simples de fenômenos comuns em dados geoespaciais.
+
+## Instruções
+
+### Python
+Grande parte do trabalho (três primeiros notebooks) foi desenvolvida em linguagem [Python](https://www.python.org/), em ambiente [Jupyter Notebook](https://jupyter.org/). Caso deseje executar os notebooks localmente, aconselhamos a [instalação do Python via Anaconda](https://docs.anaconda.com/anaconda/install/windows/). A vantagem desse distribuidor é que grande parte das bibliotecas utilizadas no trabalho são automaticamente instaladas em sua máquina.
+
+Todas as bibliotecas utilizadas, bem como suas respectivas versões são apresentadas ao final deste documento, em **Versões**. As bibliotecas que não são instaladas automaticamente junto ao Anaconda apresentam um asterisco.
+
+Opcionalmente, é possível visualizar os notebooks no próprio GitHub ou, ainda, executá-los no ambiente [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). Entretanto, nem todos os recursos presentes estarão habilitados em ambos os casos.
+
+### Julia
+Apenas o [quarto notebook](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) foi desenvolvido em linguagem [Julia](https://julialang.org/), em ambiente [Pluto](https://github.com/fonsp/Pluto.jl). Para executar esse notebook localmente, primeiro [instale Julia 1.6](https://julialang.org/downloads/). Em seguida, no Julia REPL, execute os seguintes comandos para instalar o Pluto:
+
+```julia
+julia> using Pkg
+julia> Pkg.add("Pluto")
+```
+
+Em seguida, execute os comandos abaixo para abrir o ambiente Pluto:
+
+```julia
+julia> using Pluto
+julia> Pluto.run()
+```
+
+**Nota:** Não se preocupe com as versões das bibliotecas Julia utilizadas. Como o Pluto apresenta seu próprio gerenciador de pacotes, ao abrir o notebook pela primeira vez, todos os pacotes necessários serão automaticamente instalados nas versões apropriadas (isso pode demorar alguns minutos!).
+
+**Importante:** A versão do Pluto deve ser igual ou maior à **0.16.0**. Caso queira consultar sua versão, no Julia REPL, digite:
+
+```julia
+julia> using Pkg
+julia> Pkg.status
+```
 
 ## Informações Complementares
 
@@ -135,8 +173,8 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 |    B04     |    -      | [INPE](http://www.dgi.inpe.br/catalogo/)              |Landsat 8 Sensor OLI - VERMELHO (0.630 - 0.680 μm)             |
 |    B06     |    -      | [INPE](http://www.dgi.inpe.br/catalogo/)              |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (1.560 - 1.660 μm)  |
 |    B07     |    -      | [INPE](http://www.dgi.inpe.br/catalogo/)              |Landsat 8 Sensor OLI - INFRAVERMELHO MÉDIO (2.100 - 2.300 μm)  |
-|   TARGET   |    -      | Mapa Integrado Estágio Supervisionado (2018)          |Código numérico das unidades litoestratigráficas               |
-|    COD     |    -      | Mapa Integrado Estágio Supervisionado (2018)          |Acrônimo das unidades litoestratigráficas                      |     
+|   TARGET   |    -      | Mapa Estágio Supervisionado (2018)                    |Código numérico das unidades litoestratigráficas               |
+|    COD     |    -      | Mapa Estágio Supervisionado (2018)                    |Acrônimo das unidades litoestratigráficas                      |     
 
 ## Versões
 
@@ -149,9 +187,9 @@ O modelo **XGBoost** apresentou a melhor performance com relação às métricas
 - [seaborn v0.10.1](https://seaborn.pydata.org/examples/index.html)
 - [scipy v1.5.0](https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html)
 - [scikit-learn v0.24.1](https://scikit-learn.org/stable/auto_examples/index.html)
-- [imbalanced-learn v0.8.0](https://imbalanced-learn.org/stable/references/index.html#api)
-- [xgboost v1.4.0](https://xgboost.readthedocs.io/en/latest/index.html#)
-- [geopandas v0.9.0](https://geopandas.org/docs/user_guide.html)
-- [rasterio v1.1.7](https://rasterio.readthedocs.io/en/latest/api/index.html)
-- [folium v0.12.0](https://python-visualization.github.io/folium/)
-- [shap v0.39.0](https://shap.readthedocs.io/en/latest/index.html)
+- [*imbalanced-learn v0.8.0](https://imbalanced-learn.org/stable/references/index.html#api)
+- [*xgboost v1.4.0](https://xgboost.readthedocs.io/en/latest/index.html#)
+- [*geopandas v0.9.0](https://geopandas.org/docs/user_guide.html)
+- [*rasterio v1.1.7](https://rasterio.readthedocs.io/en/latest/api/index.html)
+- [*folium v0.12.0](https://python-visualization.github.io/folium/)
+- [*shap v0.39.0](https://shap.readthedocs.io/en/latest/index.html)
