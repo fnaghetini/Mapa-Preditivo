@@ -21,6 +21,13 @@ begin
 	using Plots; gr(format="png")
 end;
 
+# ╔═╡ b390f148-a4fa-4ad6-8d0c-655f5d1fb091
+md"""
+
+![geostats-logo](https://logodownload.org/wp-content/uploads/2015/02/ufmg-logo-2.png)
+
+"""
+
 # ╔═╡ cb520500-14bc-11ec-3ceb-d50b22b326dc
 md"""
 
@@ -197,7 +204,7 @@ begin
 	
 	
 	# configurações de plotagem do variograma
-	plot(γ, color = :green, ms = 4, legend=false, xlims=(0,4200))
+	plot(γ, color = :red, ms = 5, legend=false, xlims=(0,4200))
 	
 end
 
@@ -1636,6 +1643,7 @@ version = "0.9.1+5"
 
 # ╔═╡ Cell order:
 # ╟─ede1ab03-87e3-4c42-8e4d-51b3e8829aea
+# ╟─b390f148-a4fa-4ad6-8d0c-655f5d1fb091
 # ╟─cb520500-14bc-11ec-3ceb-d50b22b326dc
 # ╟─504fb623-6b10-4905-8ded-5bc7a89b693e
 # ╟─04893b21-d20c-4084-ad58-f060c129af5f
