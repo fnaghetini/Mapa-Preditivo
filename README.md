@@ -113,7 +113,7 @@ julia> using Pkg
 julia> Pkg.add("Pluto")
 ```
 
-Em seguida, execute os comandos abaixo para abrir o ambiente Pluto:
+Em seguida, abra o ambiente Pluto:
 
 ```julia
 julia> using Pluto
@@ -126,7 +126,7 @@ julia> Pluto.run()
 
 ```julia
 julia> using Pkg
-julia> Pkg.status
+julia> Pkg.status()
 ```
 
 ## Informações Complementares
