@@ -15,7 +15,7 @@ Parâmetros:
 - col : variável a ser truncada
 
 Retorna:
-- serie : variável (serie) truncada
+- Variável truncada
 
 """
 

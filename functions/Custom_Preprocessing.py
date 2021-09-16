@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------------------------------
-# Classe auxiliar para realização da PCA
+# Classe auxiliar para realização da PCA personalizada
 # ---------------------------------------------------------------------------------------------------
 
 import numpy as np 
@@ -9,7 +9,7 @@ from sklearn.decomposition import PCA
 """
     MaskedPCA(n_components :: int, mask :: narray)
 
-Classe que realiza uma Análise de Componentes Principais (PCA) apenas das features definidas pelo
+Classe que realiza uma Análise de Componentes Principais (ACP) apenas das features definidas pelo
 parâmetro mask. O número de componentes principais pode ser informado por meio do parâmetro
 n_components.
 

@@ -15,8 +15,8 @@ Retorna um dataframe com as coordenadas e as predições de cada modelo treinado
 Parâmetros:
 - dic_ŷ_train : dicionário com as predições de cada modelo para o conjunto de treino
 - dic_ŷ_test : dicionário com as predições de cada modelo para o conjunto de teste
-- train : dataframe (t, m) representativo dos dados de treino
-- test : dataframe (n-t, m) representativo dos dados de teste
+- train : dataframe (t, p) representativo dos dados de treino
+- test : dataframe (n-t, p) representativo dos dados de teste
 
 Retorna:
 - df_pred : dataframe(n, 9) com as coordenadas e as predições de cada modelo
@@ -86,8 +86,8 @@ Parâmetros:
 no conjunto de treino
 - pr_ŷ_test : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
 no conjunto de teste
-- train : dataframe (t, m) representativo dos dados de treino
-- test : dataframe (n-t, m) representativo dos dados de teste
+- train : dataframe (t, p) representativo dos dados de treino
+- test : dataframe (n-t, p) representativo dos dados de teste
 
 Retorna:
 - df_proba_pred : dataframe (n, 8) com as coordenadas e probabilidades para cada uma das classes
@@ -115,7 +115,7 @@ def createPredProbaTable(pr_ŷ_train, pr_ŷ_test, train, test):
                             ŷ_train :: narray, ŷ_test :: narray,
                             train :: dataframe, test :: dataframe)
 
-Retorna um dataframe com as coordenadas e entropia cruzada.
+Retorna um dataframe com as coordenadas e valores de entropia cruzada.
 
 Parâmetros:
 - pr_ŷ_train : narray (t, 6) representando as predições probabilísticas para cada uma das classes
@@ -124,8 +124,8 @@ do conjunto de treino
 do conjunto de teste
 - ŷ_train : narray(t, ) representando as predições do conjunto de treino
 - ŷ_test : narray(n-t, ) representando as predições do conjunto de teste
-- train : dataframe (t, m) representativo dos dados de treino
-- test : dataframe (n-t, m) representativo dos dados de teste
+- train : dataframe (t, p) representativo dos dados de treino
+- test : dataframe (n-t, p) representativo dos dados de teste
 
 Retorna:
 - df_entropy : dataframe(n, 3) com as coordenadas e entropia cruzada

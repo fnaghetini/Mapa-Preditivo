@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------------------------------------
-# Função auxiliar para exportação dos resultados
+# Função auxiliar para exportação dos resultados como raster
 # -----------------------------------------------------------------------------------------------------------
 
 import os
@@ -14,7 +14,7 @@ Converte um dataframe em raster (.tif). SIRGAS2000 UTM Zona 23S é o sistema de 
 do raster é de 62.5 m x 62.5 m.
 
 Parâmetros:
-- df : dataframe(n, m). Deve conter as coordenadas (x e Y) e uma ou mais variáveis de interesse
+- df : dataframe(n, p). Deve conter as coordenadas (x e Y) e uma ou mais variáveis de interesse
 - filename : nome do raster. Não é necessário adicionar o sufixo '.tif'
 - col : variável de interesse
 

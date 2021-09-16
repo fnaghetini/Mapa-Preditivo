@@ -98,7 +98,7 @@ Parâmetros:
 - report : dataframe de report das performances
 - models : lista com os nomes de cada um dos modelos
 - col : cor do gráfico de barras
-- ec : cor da borda do gráfico de barras
+- ec : cor da borda do gráfico
 
 Retorna:
 - Gráfico de barras com os valores F1-score de para cada um dos modelos
