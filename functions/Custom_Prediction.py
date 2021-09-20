@@ -111,44 +111,44 @@ def createPredProbaTable(pr_ŷ_train, pr_ŷ_test, train, test):
 # -----------------------------------------------------------------------------------------------------------
 
 """
-    categoricalCrossEntropy(pr_ŷ_train :: narray, pr_ŷ_test :: narray,
-                            ŷ_train :: narray, ŷ_test :: narray,
-                            train :: dataframe, test :: dataframe)
+    InformationEntropy(pr_ŷ_train :: narray, pr_ŷ_test :: narray,
+                       train :: dataframe, test :: dataframe)
 
-Retorna um dataframe com as coordenadas e valores de entropia cruzada.
+Retorna um dataframe com as coordenadas e valores de entropia da informação (de Shannon). Probabilidades
+nulas são ignoradas para o cálculo da entropia.
 
 Parâmetros:
 - pr_ŷ_train : narray (t, 6) representando as predições probabilísticas para cada uma das classes
 do conjunto de treino
 - pr_ŷ_test : narray (n-t, 6) representando as predições probabilísticas para cada uma das classes
 do conjunto de teste
-- ŷ_train : narray(t, ) representando as predições do conjunto de treino
-- ŷ_test : narray(n-t, ) representando as predições do conjunto de teste
 - train : dataframe (t, p) representativo dos dados de treino
 - test : dataframe (n-t, p) representativo dos dados de teste
 
 Retorna:
-- df_entropy : dataframe(n, 3) com as coordenadas e entropia cruzada
+- df_entropy : dataframe(n, 3) com as coordenadas e entropia
 
 """
 
-def categoricalCrossEntropy(pr_ŷ_train, pr_ŷ_test, ŷ_train, ŷ_test, train, test):
+def InformationEntropy(pr_ŷ_train, pr_ŷ_test, train, test):
     train_coords = train[['X','Y']]
     test_coords  = test[['X','Y']]
     df_entropy = pd.concat([train_coords,test_coords])
 
-    ŷ = np.concatenate([ŷ_train,ŷ_test])
     pr_ŷ = np.concatenate([pr_ŷ_train,pr_ŷ_test])
 
     size = len(df_entropy)
     entropy_list = []
     
     for i in range(size):
-        target = ŷ[i]
         pred_prob = pr_ŷ[i,:]
-        x = pred_prob[target - 1]
-        entropy = - np.log2(x)
-        entropy_list.append(entropy)
+        h = 0
+
+        for p in pred_prob:
+            if p != 0:
+                h += - (p * (np.log2(p)))
+
+        entropy_list.append(h)
         
     df_entropy['ENTROPY'] = entropy_list
     
