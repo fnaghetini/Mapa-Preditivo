@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.0
+# v0.16.1
 
 using Markdown
 using InteractiveUtils
@@ -67,8 +67,17 @@ Abaixo, os dados de treino e teste gerados no [segundo notebook](https://github.
 
 # ╔═╡ a88ea1b6-9291-4485-a573-68be7f34529e
 begin
-	train = CSV.File("data/train.csv") |> DataFrame
-	test = CSV.File("data/test.csv") |> DataFrame
+	# link dos dados
+	url_train = "https://raw.githubusercontent.com/fnaghetini/Mapa-Preditivo/main/data/train.csv"
+	url_test = "https://raw.githubusercontent.com/fnaghetini/Mapa-Preditivo/main/data/test.csv"
+	
+	# download dos dados
+	file_train = download(url_train)
+	file_test = download(url_test)
+	
+	# conversão em dataframe
+	train = CSV.File(file_train) |> DataFrame
+	test = CSV.File(file_test) |> DataFrame
 end;
 
 # ╔═╡ 77be9d2b-8ba2-4b29-86e9-ad013b83202f
@@ -897,9 +906,9 @@ version = "0.7.2"
 
 [[MKL_jll]]
 deps = ["Artifacts", "IntelOpenMP_jll", "JLLWrappers", "LazyArtifacts", "Libdl", "Pkg"]
-git-tree-sha1 = "c253236b0ed414624b083e6b72bfe891fbd2c7af"
+git-tree-sha1 = "5455aef09b40e5020e1520f551fa3135040d4ed0"
 uuid = "856f044c-d86e-5d09-b602-aeab76dc8ba7"
-version = "2021.1.1+1"
+version = "2021.1.1+2"
 
 [[MLJModelInterface]]
 deps = ["Random", "ScientificTypesBase", "StatisticalTraits"]
