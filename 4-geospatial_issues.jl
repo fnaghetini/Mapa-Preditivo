@@ -25,7 +25,7 @@ end;
 # ╔═╡ b390f148-a4fa-4ad6-8d0c-655f5d1fb091
 md"""
 
-![geostats-logo](https://logodownload.org/wp-content/uploads/2015/02/ufmg-logo-2.png)
+![ufmg-logo](https://logodownload.org/wp-content/uploads/2015/02/ufmg-logo-2.png)
 
 """
 
