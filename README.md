@@ -157,8 +157,8 @@ julia> Pkg.status()
 
 |  Variável  |  Unidade  |                         Fonte                         |                           Descrição                           |
 |:----------:|:---------:|:-----------------------------------------------------:|:-------------------------------------------------------------:|
-|    X       |    m      |                           -                           |Coordenada X (SIRGAS2000 Zona 23S)                             |
-|    Y       |    m      |                           -                           |Coordenada Y (SIRGAS2000 Zona 23S)                             |
+|    X       |    m      |                           -                           |Coordenada X                                                   |
+|    Y       |    m      |                           -                           |Coordenada Y                                                   |
 |    GT      |   nT/m    | Biblioteca UFMG                                       |Gradiente total                                                |
 |    K       |    %      | Biblioteca UFMG                                       |Potássio                                                       |
 |    TH      |   ppm     | Biblioteca UFMG                                       |Tório                                                          |
@@ -193,3 +193,5 @@ julia> Pkg.status()
 - [*rasterio v1.1.7](https://rasterio.readthedocs.io/en/latest/api/index.html)
 - [*folium v0.12.0](https://python-visualization.github.io/folium/)
 - [*shap v0.39.0](https://shap.readthedocs.io/en/latest/index.html)
+
+**Nota:** As bibliotecas que não são instaladas automaticamente junto ao Anaconda foram destacadas com o símbolo "*".
