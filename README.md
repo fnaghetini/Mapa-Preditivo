@@ -73,6 +73,7 @@ Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores per
 ├───2-predictive_litho_map.ipynb
 ├───3-model_explanation.ipynb
 ├───4-geospatial_issues.jl
+├───LICENSE
 └───README.md
 ```
 
