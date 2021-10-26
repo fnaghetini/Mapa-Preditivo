@@ -202,9 +202,9 @@ julia> Pkg.status()
 Este repositório encontra-se sob a licença MIT:
 
 ```bash
-"Uma licença permissiva, curta e simples com condições que exigem apenas a preservação de direitos autorais e avisos de
-licença. Trabalhos licenciados, modificações e trabalhos maiores podem ser distribuídos em termos diferentes e sem
-código-fonte."
+"Uma licença permissiva, curta e simples com condições que exigem apenas a preservação de direitos
+autorais e avisos de licença. Trabalhos licenciados, modificações e trabalhos maiores podem ser
+distribuídos em termos diferentes e sem código-fonte."
 ```
 
 Para mais detalhes, consulte o arquivo de [licença](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/LICENSE).
