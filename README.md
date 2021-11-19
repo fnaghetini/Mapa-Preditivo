@@ -8,6 +8,14 @@ Orientandos: [Franco Naghetini](https://github.com/fnaghetini) & [Guilherme Silv
 
 Orientadores: [Pedro Casagrande](https://github.com/casagrandepedro) & [Iago Costa](https://github.com/iagoslc)
 
+Trabalho Geológico de Graduação apresentado ao Curso  de  Geologia  da  Universidade  Federal  de Minas  Gerais,  como  requisito  parcial  para obtenção do título Bacharel em Geologia. Clique na imagem abaixo para assistir a defesa da monografia:
+
+<p align="center">
+  <a href="https://youtu.be/XX54NasSea0">
+    <img src="https://img.youtube.com/vi/XX54NasSea0/maxresdefault.jpg" height="400px">
+  </a>
+</p>
+
 ## Aspectos Gerais
 
 O objetivo deste trabalho é solucionar uma tarefa supervisionada de classificação multinomial  **𝑇**  que consiste em predizer as unidades litoestratigráficas  **𝑦**  em um determinado domínio  **𝐷**  como função de sensores remotos  **X**  e com base em anotações  **𝑦(𝑖)=𝑓(𝑥(𝑖))**  interpretadas pelos geólogos responsáveis pelo mapeamento da área.
@@ -74,7 +82,8 @@ Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores per
 ├───3-model_explanation.ipynb
 ├───4-geospatial_issues.jl
 ├───LICENSE
-└───README.md
+├───README.md
+└───undergrad_thesis.pdf
 ```
 
 - [data](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data) contém os dados utilizados nos quatro *notebooks* e os dados de treino e teste. Os sensores remotos processados em SIRGAS2000 UTM Zona 23S com resolução de 62.5 m x 62.5 m estão na subpasta [raster](https://github.com/fnaghetini/Mapa-Preditivo/tree/main/data/raster).
@@ -96,6 +105,8 @@ Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores per
 - [3-model_explanation.ipynb](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/3-model_explanation.ipynb) apresenta os resultados da interpretação do classificador *XGBoost* com o *framework* SHAP.
 
 - [4-geospatial_issues.jl](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) apresenta uma análise interativa simples de fenômenos comuns em dados geoespaciais.
+
+- [undergrad_thesis](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/undergrad_thesis.pdf) é a monografia resultante deste trabalho com as sugestões propostas pelos membros da banca. Caso tenha interesse em acessar os anexos da monografia, procure por este trabalho [neste link](http://www.igc.ufmg.br/images/igc/biblioteca/TCC_GEOLOGIA_tabela_17_11_2021.htm). Ele foi submetido à biblioteca do IGC/UFMG em 2021.
 
 ## Instruções
 
