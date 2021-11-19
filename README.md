@@ -106,7 +106,7 @@ Dentre eles, os modelos *XGBoost* e *Random Forest* apresentaram as melhores per
 
 - [4-geospatial_issues.jl](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/4-geospatial_issues.jl) apresenta uma análise interativa simples de fenômenos comuns em dados geoespaciais.
 
-- [undergrad_thesis](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/undergrad_thesis.pdf) é a monografia resultante deste trabalho com as sugestões propostas pelos membros da banca. Caso tenha interesse em acessar os anexos da monografia, procure por este trabalho [neste link](http://www.igc.ufmg.br/images/igc/biblioteca/TCC_GEOLOGIA_tabela_17_11_2021.htm). Ele foi submetido à biblioteca do IGC/UFMG em 2021.
+- [undergrad_thesis.pdf](https://github.com/fnaghetini/Mapa-Preditivo/blob/main/undergrad_thesis.pdf) é a monografia resultante deste trabalho com as sugestões propostas pelos membros da banca. Caso tenha interesse em acessar os anexos da monografia, procure por este trabalho [neste link](http://www.igc.ufmg.br/images/igc/biblioteca/TCC_GEOLOGIA_tabela_17_11_2021.htm). Ele foi submetido à biblioteca do IGC/UFMG em 2021.
 
 ## Instruções
 
